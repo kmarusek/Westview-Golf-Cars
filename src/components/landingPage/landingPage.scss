@@ -1,0 +1,292 @@
+@import "../static/style/colors.scss";
+@import "../static/style/Media.scss";
+
+
+.content {
+    padding: 0 2em;
+    width: 100%;
+}
+
+.margin-top1 {
+    margin-top: 1.5em !important;
+}
+
+.margin-top2 {
+    margin-top: 2em !important;
+}
+
+.header-block {
+    width: 100%;
+    background-image: url("../static/img/landingBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50em;
+    @include respond(extra-large) {
+        height: 65em;
+    }
+}
+
+.desc {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.feedback {
+    &__block {
+        height: 2.5em;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 1em;
+        align-items: center;
+        background-color: #e61c28;
+        color: white;
+
+        &-phone-img {
+            height: 24px;
+            min-width: 24px;
+            background-image: url("../static/img/8.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-phone-number {
+            font-weight: bold;
+            text-align: center;
+            margin-left: 0.5em;
+            width: 100%;
+        }
+    }
+}
+.card-text {
+    width: 50%;
+    color: white;
+    text-align: center;
+    @include respond(medium) {
+        width: 80%;
+    }
+}
+.card-text-bold {
+    width: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    height: 15em;
+    max-width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 4fr 8fr;
+    @include respond(small) {
+        grid-template-columns: 8fr 4fr;
+    }
+    @include respond(medium) {
+        grid-template-columns: 5fr 6fr;
+    }
+
+    &__logo {
+        background-image: url("../static/img/logo.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0 !important;
+
+        ul {
+            display: flex;
+            width: 100%;
+            max-width: 700px;
+            margin: 0;
+            padding: 0;
+            justify-content: space-between;
+            @include respond(small) {
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: 5em;
+            }
+            @include respond(medsmall){
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: 5em;
+            }
+
+            li {
+                text-decoration: none;
+                list-style-type: none;
+
+                a {
+                    color: black;
+                    font-weight: bold;
+                }
+                a:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.delimiter {
+    width: 100%;
+    margin-right: -2em;
+    background-color: $red;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-cards1 {
+    width: 100%;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    @include respond(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr)
+    }
+
+    .card-logo-img {
+        display: block;
+        background-image: url("../static/img/imageLogoAdreas.png");
+        height: 9em;
+        width: 16em;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.row-cards3 {
+    width: 100%;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    @include respond(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include respond(medsmall) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .card-logo-img {
+        display: block;
+        background-image: url("../static/img/imageLogoAdreas.png");
+        height: 9em;
+        width: 16em;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.row-cards2 {
+    width: 100%;
+    display: grid;
+    gap: 1.5em;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    @include respond(small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr)
+    }
+    .card-img {
+        display: block;
+        background-image: url("../static/img/image14.jpg");
+        height: 9em;
+        width: 16em;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.hours-opearation {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__header {
+        margin-top: 1.5em;
+        font-weight: bold;
+    }
+    &__container {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        p {
+            margin-bottom: 0.5em;
+        }
+        div:first-child {
+            p {
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+.footer-links {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding-right: 0 !important;
+    
+
+    ul {
+        @include respond(small) {
+            display: none;
+        }
+        @include respond(medium) {
+            display: none;
+        }
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+
+        li {
+            text-decoration: none;
+            list-style-type: none;
+
+            a {
+                font-size: 0.8em;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+            a:hover {
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .conditions {
+        @include respond(small) {
+            text-align: center;
+        }
+        font-size: 0.8em;
+        margin-bottom: 0;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

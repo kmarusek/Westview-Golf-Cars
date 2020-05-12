@@ -1,0 +1,21 @@
+@import '../../static/style/colors.scss';
+
+.myButton{
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+
+.myButton:hover{
+    cursor: pointer; 
+}
+
+
+
+.medium{
+    padding: .5em;
+}
+
+.red{
+    background-color: $red;
+}
