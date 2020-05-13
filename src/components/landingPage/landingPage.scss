@@ -3,8 +3,11 @@
 
 
 .content {
-    padding: 0 2em;
+    padding: 0 5em;
     width: 100%;
+    @include respond(small) {
+        padding: 0 3em;
+    }
 }
 
 .margin-top1 {
@@ -21,12 +24,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 40rem;
+    height: 50rem;
     @include respond(small) {
         height: 30rem;
     }
     @include respond(medium) {
-        height: 40rem;
+        height: 50rem;
     }
     @include respond(medsmall) {
         height: 30rem;
@@ -37,10 +40,12 @@
 }
 
 .desc {
+
+    
     height: 2em;
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: 800;
     justify-content: center;
     background-color: black;
     color: white;
@@ -164,6 +169,9 @@
                     color: black;
                     font-weight: bold;
                 }
+                a:last-child {
+                    padding-right: 0;
+                }
                 a:hover {
                     cursor: pointer;
                     color: $hover;
@@ -214,7 +222,7 @@
     width: 100%;
     display: grid;
     gap: 1.5em;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 18em;
     @include respond(small) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -228,9 +236,9 @@
     .card-logo-img {
         display: block;
         background-image: url("../static/img/imageLogoAdreas.png");
-        height: 9em;
-        width: 16em;
-        background-position: center;
+        height: 100%;
+        width: 100%;
+        background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -275,6 +283,7 @@
             margin-bottom: 0.5em;
         }
         div:first-child {
+            margin-bottom: 2em;
             p {
                 margin-right: 0.5em;
             }
