@@ -14,10 +14,10 @@ const LandingPage = () => {
             <div className='header-block'>
                 <div className='header-block content'>
                     <div className='feedback'>
-                            <div className='feedback__block'>
-                                <div className = 'feedback__block-phone-img'></div>
-                                <div className='feedback__block-phone-number'>269 - 555 - 5555</div>
-                            </div>
+                        <div className='feedback__block'>
+                            <div className='feedback__block-phone-img'></div>
+                            <div className='feedback__block-phone-number'>269 - 555 - 5555</div>
+                        </div>
                     </div>
                     <div className='menu'>
                         <div className='menu__logo'></div>
@@ -49,7 +49,9 @@ const LandingPage = () => {
             </div>
             <div className='desc'>GOLF CARS</div>
             <div className='content-block content margin-top1'>
-                <div className='margin-top1 text' style={{padding: '0 1em'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsum iure numquam recusandae sed eveniet pariatur molestiae corporis nesciunt voluptatem, accusamus quam esse autem mollitia?</div>
+                <div className='margin-top1 text' style={{ padding: '0 1em' }}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</div>
                 <div className='row-cards1 margin-top1'>
                     <Card src='image3.jpg'>
                         <div className='card-text'>
@@ -129,7 +131,7 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className='footer-links margin-top1'>
-                <div className='content row' style={{height: '100%', margin: 0}}>
+                <div className='content row' style={{ height: '100%', margin: 0 }}>
                     <ul className='col-0 col-lg-5'>
                         <li>
                             <NavLink href='/'>HOME</NavLink>
@@ -151,7 +153,7 @@ const LandingPage = () => {
                         </li>
                     </ul>
 
-                    <p className='offset-0 col-12 offset-lg-1 col-lg-6 conditions' style={{paddingRight: '0'}}>COPYRIGHT © WESTVIEW GOLF CARS 2020 | ABOVE MEDIA</p>
+                    <p className='offset-0 col-12 offset-lg-1 col-lg-6 conditions' style={{ paddingRight: '0' }}>COPYRIGHT © WESTVIEW GOLF CARS 2020 | ABOVE MEDIA</p>
                 </div>
 
             </div>
