@@ -322,6 +322,10 @@
             text-decoration: none;
             list-style-type: none;
 
+            a:first-child{
+                padding-left: 0;
+            }
+
             a {
                 font-size: 0.8em;
                 height: 100%;
