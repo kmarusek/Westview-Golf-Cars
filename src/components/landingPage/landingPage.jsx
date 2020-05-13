@@ -13,13 +13,11 @@ const LandingPage = () => {
 
             <div className='header-block'>
                 <div className='header-block content'>
-                    <div className='feedback row'>
-                        <div className='col-6 offset-6 col-sm-5 offset-sm-7 col-md-4 offset-md-8 col-xl-3 offset-xl-9'>
+                    <div className='feedback'>
                             <div className='feedback__block'>
                                 <div className = 'feedback__block-phone-img'></div>
                                 <div className='feedback__block-phone-number'>269 - 555 - 5555</div>
                             </div>
-                        </div>
                     </div>
                     <div className='menu'>
                         <div className='menu__logo'></div>
@@ -85,7 +83,7 @@ const LandingPage = () => {
                             SMALL ENGINE <br></br>
                              REPAIR
                         </div>
-                        <Button style={{ marginTop: '.5em' }}>
+                        <Button className='margin-top1'>
                             LOREM IPSUM
                         </Button>
                     </Card>
@@ -99,7 +97,7 @@ const LandingPage = () => {
                     <Card style={{ height: '100%', width: '100%', backgroundColor: 'white' }}>
                         <div className='card-logo-img'></div>
                         <Button className='margin-top1'>
-                            LOREM IPSUM
+                            GET DIRECTIONS
                         </Button>
                     </Card>
                     <Card style={{ height: '100%', width: '100%' }} src='imageMap.png' />
