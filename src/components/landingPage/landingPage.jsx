@@ -14,7 +14,7 @@ const LandingPage = () => {
             <div className='header-block'>
                 <div className='header-block content'>
                     <div className='feedback row'>
-                        <div className='col-9 offset-3 col-md-4 offset-md-8'>
+                        <div className='col-6 offset-6 col-sm-5 offset-sm-7 col-md-4 offset-md-8 col-xl-3 offset-xl-9'>
                             <div className='feedback__block'>
                                 <div className = 'feedback__block-phone-img'></div>
                                 <div className='feedback__block-phone-number'>269 - 555 - 5555</div>
@@ -51,7 +51,7 @@ const LandingPage = () => {
             </div>
             <div className='desc'>GOLF CARS</div>
             <div className='content-block content margin-top1'>
-                <div className='margin-top1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsum iure numquam recusandae sed eveniet pariatur molestiae corporis nesciunt voluptatem, accusamus quam esse autem mollitia?</div>
+                <div className='margin-top1 text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsum iure numquam recusandae sed eveniet pariatur molestiae corporis nesciunt voluptatem, accusamus quam esse autem mollitia?</div>
                 <div className='row-cards1 margin-top1'>
                     <Card src='image3.jpg'>
                         <div className='card-text'>
@@ -85,7 +85,7 @@ const LandingPage = () => {
                             SMALL ENGINE <br></br>
                              REPAIR
                         </div>
-                        <Button>
+                        <Button style={{ marginTop: '.5em' }}>
                             LOREM IPSUM
                         </Button>
                     </Card>
@@ -131,7 +131,7 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className='footer-links margin-top1'>
-                <div className='content row'>
+                <div className='content row' style={{height: '100%'}}>
                     <ul className='col-0 col-lg-5'>
                         <li>
                             <NavLink href='/'>HOME</NavLink>

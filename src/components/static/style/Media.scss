@@ -5,7 +5,7 @@
       }
     }
     @if $breakpoint == medium {
-      @media (max-width: 960px) {
+      @media (min-width: 730px) and (max-width: 992px) {
         @content;
       }
     }

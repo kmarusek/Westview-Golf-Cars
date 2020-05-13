@@ -1,4 +1,5 @@
 @import '../../static/style/colors.scss';
+@import '../../static/style/colors.scss';
 
 .myButton{
     color: white;
@@ -8,6 +9,7 @@
 
 .myButton:hover{
     cursor: pointer; 
+    color: $hover;
 }
 
 
