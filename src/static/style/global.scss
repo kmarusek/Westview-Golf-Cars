@@ -1,0 +1,19 @@
+@import './Media.scss';
+
+
+html,
+body {
+    
+    @include respond(large) {
+        font-size: 16px !important;
+    }
+    @include respond(medium) {
+        font-size: 14px !important;
+    }
+    @include respond(medsmall) {
+        font-size: 12px !important;
+    }
+    @include respond(small) {
+        font-size: 12px !important;
+    }
+}

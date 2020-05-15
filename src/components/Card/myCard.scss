@@ -1,0 +1,11 @@
+@import "../../static/style/Media.scss";
+@import "../../static/style/colors.scss";
+
+.myCard {
+    width: 100%;
+    height: 15em;
+    @include respond(large) {
+        height: 25em;
+    }
+
+}
