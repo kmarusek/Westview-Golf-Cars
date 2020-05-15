@@ -231,7 +231,7 @@ body{
     width: 100%;
     display: grid;
     gap: 1.5em;
-    grid-template-columns: 1fr 1fr 18em;
+    grid-template-columns: 1fr 1fr 16em;
     @include respond(small) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -240,6 +240,10 @@ body{
     @include respond(medsmall) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
+    }
+    @include respond(large){
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .card-logo-img {
