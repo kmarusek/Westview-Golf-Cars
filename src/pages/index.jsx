@@ -1,10 +1,25 @@
 import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 import Button from '../components/Button'
 import Card from '../components/Card'
-import { Link, useStaticQuery, graphql } from 'gatsby'
 import '../../static/style/global.scss'
 import './landingPage.scss'
+
+const HeroContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 0;
+  // top: 10%;
+  // left: 12%;
+  // @media (min-width: 768px) {
+  //   top: 10%;
+  // }
+  // @media (min-width: 1024px) {
+  //   top: 15%;
+  // }
+`
 
 const LandingPage = () => {
   const data = useStaticQuery(graphql`
@@ -22,46 +37,51 @@ const LandingPage = () => {
   return (
     <>
       <div className="header-block">
-        <div className='text-center text-primary'>Content</div>
-        <div className="header-block content">
-          {/* <Img
+        <div className="header-block content relative">
+          <Img
             fluid={data.background.childImageSharp.fluid}
-            className='-mt-12 md:-mt-6 md:mb-0 w-full'
-            alt='hero-image'
-          /> */}
-          <div className="feedback">
-            <div className="feedback__block">
-              <div className="feedback__block-phone-img"></div>
-              <div className="feedback__block-phone-number">
-                269 - 555 - 5555
+            className="w-full"
+            alt="hero-image"
+          />
+          <HeroContainer>
+            <div className='px-8 md:px-12 lg:px-24'>
+            <div className="feedback">
+              <div className="feedback__block">
+                <div className="feedback__block-phone-img"></div>
+                <div className="feedback__block-phone-number">
+                  269 - 555 - 5555
+                </div>
               </div>
             </div>
-          </div>
-          <div className="menu">
-            <div className="menu__logo"></div>
-            <div className="menu__links">
-              <ul>
-                <li>
-                  <Link to="/">HOME</Link>
-                </li>
-                <li>
-                  <Link>ABOUT</Link>
-                </li>
-                <li>
-                  <Link>SERVICES</Link>
-                </li>
-                <li>
-                  <Link>CARPORTS</Link>
-                </li>
-                <li>
-                  <Link>NEWS</Link>
-                </li>
-                <li>
-                  <Link>CONTACT</Link>
-                </li>
-              </ul>
             </div>
-          </div>
+            <div className='px-8 md:px-12 lg:px-24'>
+              <div className="menu">
+                <div className="menu__logo"></div>
+                <div className="menu__links">
+                  <ul>
+                    <li>
+                      <Link to="/">HOME</Link>
+                    </li>
+                    <li>
+                      <Link>ABOUT</Link>
+                    </li>
+                    <li>
+                      <Link>SERVICES</Link>
+                    </li>
+                    <li>
+                      <Link>CARPORTS</Link>
+                    </li>
+                    <li>
+                      <Link>NEWS</Link>
+                    </li>
+                    <li>
+                      <Link>CONTACT</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </HeroContainer>
         </div>
       </div>
       <div className="desc">GOLF CARS</div>

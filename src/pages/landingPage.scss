@@ -7,11 +7,11 @@ body {
 }
 
 .content {
-  padding: 0 5em;
-  width: 100%;
-  @include respond(small) {
-    padding: 0 3em;
-  }
+  // padding: 0 5em;
+  // width: 100%;
+  // @include respond(small) {
+  //   padding: 0 3em;
+  // }
 }
 
 .margin-top1 {
@@ -24,23 +24,23 @@ body {
 
 .header-block {
   width: 100%;
-  background-image: url('../../static/images/landingBackground.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 50rem;
-  @include respond(small) {
-    height: 30rem;
-  }
-  @include respond(medium) {
-    height: 50rem;
-  }
-  @include respond(medsmall) {
-    height: 30rem;
-  }
-  @include respond(extra-large) {
-    height: 50rem;
-  }
+  // background-image: url('../../static/images/landingBackground.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // height: 50rem;
+  // @include respond(small) {
+  //   height: 30rem;
+  // }
+  // @include respond(medium) {
+  //   height: 50rem;
+  // }
+  // @include respond(medsmall) {
+  //   height: 30rem;
+  // }
+  // @include respond(extra-large) {
+  //   height: 50rem;
+  // }
 }
 
 .desc {
@@ -125,7 +125,7 @@ body {
   }
 
   @include respond(large) {
-    grid-template-columns: 6fr 5fr;
+    grid-template-columns: 3fr 5fr;
   }
 
   &__logo {
@@ -148,12 +148,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 0 !important;
 
     ul {
       display: flex;
       width: 100%;
-      max-width: 700px;
       margin: 0;
       padding: 0;
       justify-content: space-between;
@@ -172,7 +170,9 @@ body {
 
         a {
           color: black;
-          font-weight: bold;
+          font-weight: 700;
+          font-size: 1.25rem;
+          padding-left: 2rem;
         }
         a:last-child {
           padding-right: 0;
