@@ -1,0 +1,15 @@
+:root {
+  --red: #e61d30;
+  --red-light: #cd1041;
+  --primary: var(--red);
+  --primary-light: var(--red-light);
+  --dark: #22212d;
+  --dark-light: #262533;
+}
+/*! purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/*! purgecss end ignore */
+@tailwind utilities;
+
+@import '~bootstrap/dist/css/bootstrap.min.css';

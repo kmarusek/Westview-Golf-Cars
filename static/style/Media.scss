@@ -1,4 +1,3 @@
-
 @mixin respond($breakpoint) {
   @if $breakpoint == large {
     @media (min-width: 1140px) {

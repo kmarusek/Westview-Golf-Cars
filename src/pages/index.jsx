@@ -1,16 +1,34 @@
 import React from 'react'
-import './landingPage.scss'
+import Img from 'gatsby-image'
 import Button from '../components/Button'
 import Card from '../components/Card'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'gatsby'
-import '../static/style/global.scss'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import '../../static/style/global.scss'
+import './landingPage.scss'
 
 const LandingPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      background: file(relativePath: { eq: "landingBackground.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <div className="header-block">
+        <div className='text-center text-primary'>Content</div>
         <div className="header-block content">
+          {/* <Img
+            fluid={data.background.childImageSharp.fluid}
+            className='-mt-12 md:-mt-6 md:mb-0 w-full'
+            alt='hero-image'
+          /> */}
           <div className="feedback">
             <div className="feedback__block">
               <div className="feedback__block-phone-img"></div>
