@@ -1,27 +1,28 @@
+
 @mixin respond($breakpoint) {
-    @if $breakpoint == large {
-      @media (min-width: 1140px) {
-        @content;
-      }
-    }
-    @if $breakpoint == medium {
-      @media (min-width: 730px) and (max-width: 992px) {
-        @content;
-      }
-    }
-    @if $breakpoint == small {
-      @media (max-width: 540px) {
-        @content;
-      }
-    }
-    @if $breakpoint == medsmall {
-      @media (min-width: 540px) and (max-width: 730px) {
-        @content;
-      }
-    }
-    @if $breakpoint == extra-large {
-      @media (min-width: 1300px) {
-        @content;
-      }
+  @if $breakpoint == large {
+    @media (min-width: 1140px) {
+      @content;
     }
   }
+  @if $breakpoint == medium {
+    @media (min-width: 730px) and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media (max-width: 540px) {
+      @content;
+    }
+  }
+  @if $breakpoint == medsmall {
+    @media (min-width: 540px) and (max-width: 730px) {
+      @content;
+    }
+  }
+  @if $breakpoint == extra-large {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+}
