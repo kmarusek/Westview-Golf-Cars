@@ -196,7 +196,7 @@ const LandingPage = () => {
               fluid={data.serviceLeft.childImageSharp.fluid}
               className="w-full"
               alt="hero-image"
-              style={{ maxHeight: mediumScreen ? 360 : 260 }}
+              style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
               <p className='text-4xl font-extrabold uppercase'>Small Engine Repair</p>
@@ -208,7 +208,7 @@ const LandingPage = () => {
               fluid={data.serviceRight.childImageSharp.fluid}
               className="w-full"
               alt="hero-image"
-              style={{ maxHeight: mediumScreen ? 360 : 260 }}
+              style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
               <p className='text-4xl font-extrabold uppercase'>Carrot Installations</p>

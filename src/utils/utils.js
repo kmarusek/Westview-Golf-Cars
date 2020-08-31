@@ -1,1 +1,1 @@
-export const mediumScreen = window.innerWidth > 768
+export const mediumScreen = typeof window !== 'undefined' && window.innerWidth > 768;

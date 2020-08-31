@@ -6,10 +6,9 @@
   --dark: #22212d;
   --dark-light: #262533;
 }
+
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
-
-/* @import '~bootstrap/dist/css/bootstrap.min.css'; */

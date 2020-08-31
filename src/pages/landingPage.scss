@@ -121,7 +121,8 @@ body {
     margin-top: 5em;
   }
   @include respond(medium) {
-    grid-template-columns: 4fr 6fr;
+    // grid-template-columns: 5fr 6fr;
+    grid-template-columns: none;
   }
 
   @include respond(large) {
