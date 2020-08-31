@@ -1,0 +1,1 @@
+export const mediumScreen = window.innerWidth > 768

@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import './myCard.scss'
 
 import { createUseStyles } from 'react-jss'
@@ -9,7 +10,7 @@ const useStyles = createUseStyles({
     let background
     if (!!src)
       background = {
-        // backgroundImage: `url(${require('../../static/images/' + src)})`,
+        backgroundImage: `url(${require('../../../static/images/' + src)})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -42,5 +43,10 @@ const Card = ({
     </div>
   )
 }
+
+export const Card2 = styled.div`
+
+`
+
 
 export default Card

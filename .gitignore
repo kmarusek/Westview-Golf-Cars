@@ -1,6 +1,7 @@
 # Project dependencies
 .cache
 .now
+public
 node_modules
 yarn-error.log
 
