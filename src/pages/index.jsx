@@ -23,14 +23,17 @@ const CardService = styled.div`
   ${tw`w-full md:w-1/2 relative`}
   max-height: 240px
   @media (min-width: 1024px) {
-    max-height: 320px
+    max-height: 320px;
   }
   .gatsby-image-wrapper {
-    max-height: 240px
-    @media (min-width: 1024px) {
-      max-height: 320px
+    max-height: 240px @media (min-width: 1024px) {
+      max-height: 320px;
     }
   }
+`
+const OperationBox = styled.div`
+  background-color: rgba(0, 0, 0, 0.55);
+  ${tw`text-white p-6 xl:p-10 uppercase`}
 `
 
 const LandingPage = () => {
@@ -72,6 +75,20 @@ const LandingPage = () => {
         }
       }
       serviceRight: file(relativePath: { eq: "image2.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      locationMap: file(relativePath: { eq: "location-map.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logoMap: file(relativePath: { eq: "imageLogoAdreas.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -199,7 +216,9 @@ const LandingPage = () => {
               style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
-              <p className='text-4xl font-extrabold uppercase'>Small Engine Repair</p>
+              <p className="text-4xl font-extrabold uppercase">
+                Small Engine Repair
+              </p>
               <Button className="mt-4">LOREM IPSUM</Button>
             </CardImg>
           </CardService>
@@ -211,7 +230,9 @@ const LandingPage = () => {
               style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
-              <p className='text-4xl font-extrabold uppercase'>Carrot Installations</p>
+              <p className="text-4xl font-extrabold uppercase">
+                Carrot Installations
+              </p>
               <Button className="mt-4">LOREM IPSUM</Button>
             </CardImg>
           </CardService>
@@ -225,7 +246,7 @@ const LandingPage = () => {
         </div>
 
         {/* divider */}
-        <div className="row-cards3 margin-top1">
+        {/* <div className="row-cards3 margin-top1">
           <Card
             style={{ height: '100%', width: '100%', backgroundColor: 'white' }}
           >
@@ -256,8 +277,61 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className="mt-4 container">
+          <div className="px-4 lg:px-6 relative">
+            <Img
+              fluid={data.locationMap.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+            <div className="md:absolute md:w-full md:top-0 md:flex md:p-10 md:justify-between md:items-center md:h-full lg:pr-16">
+              <div className='w-1/3'>
+                <Img
+                  fluid={data.logoMap.childImageSharp.fluid}
+                  className="w-full"
+                  alt="hero-image"
+                />
+              </div>
+              <OperationBox className="">
+                <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">HOURS OF OPERATING</h4>
+                <div className="">
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>MON</p>
+                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>TUE</p>
+                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>WED</p>
+                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>THUR</p>
+                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>FRI</p>
+                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>SAT</p>
+                    <p className='w-2/3'>close</p>
+                  </div>
+                  <div className='flex py-1 lg:py-2 font-semibold'>
+                    <p className='w-1/3'>Sun</p>
+                    <p className='w-2/3'>close</p>
+                  </div>
+                </div>
+              </OperationBox>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* footer */}
       <div className="mt-6 bg-black py-2 text-sm">
         <div className="container w-full flex justify-between">
           <ul className="max-w-xl flex flex-wrap">
