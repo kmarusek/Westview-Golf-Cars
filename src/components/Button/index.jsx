@@ -2,21 +2,26 @@ import React from 'react'
 import './myButton.scss'
 
 const Button = ({
-    className: userClassName = '',
-    color: userColor = 'red',
-    size: userSize = 'medium',
-    children = 'Text',
-    style: userStyle = {},
-    onClick = () =>{}
-}) =>{
-    return(
-        <div onClick={onClick}
-        className={`myButton ${userClassName} ${userColor} ${userSize}`}
-         style={userStyle}
-        >
-            {children}
-        </div>
-    )
+  className: userClassName = '',
+  color: userColor = 'red',
+  size: userSize = 'medium',
+  children = 'Text',
+  style: userStyle = {},
+}) => {
+  const { onClick } = props
+    
+  return (
+    <div
+      onClick={onClick}
+      onKeyPress={onClick}
+      className={`myButton ${userClassName} ${userColor} ${userSize}`}
+      style={userStyle}
+      role='button'
+      tabIndex='0'
+    >
+      {children}
+    </div>
+  )
 }
 
 export default Button

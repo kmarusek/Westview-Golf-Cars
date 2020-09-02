@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import tw from 'twin.macro'
+import { mediumScreen } from '../utils/utils'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Button from '../components/Button'
-import Card, { Card2 } from '../components/Card'
 import '../../static/style/global.scss'
 import './landingPage.scss'
-import tw from 'twin.macro'
-import { mediumScreen } from '../utils/utils'
 
 const HeroContainer = styled.div`
   position: absolute;
@@ -127,19 +126,19 @@ const LandingPage = () => {
                       <Link to="/">HOME</Link>
                     </li>
                     <li>
-                      <Link>ABOUT</Link>
+                      <Link to="#">ABOUT</Link>
                     </li>
                     <li>
-                      <Link>SERVICES</Link>
+                      <Link to="#">SERVICES</Link>
                     </li>
                     <li>
-                      <Link>CARPORTS</Link>
+                      <Link to="#">CARPORTS</Link>
                     </li>
                     <li>
-                      <Link>NEWS</Link>
+                      <Link to="#">NEWS</Link>
                     </li>
                     <li>
-                      <Link>CONTACT</Link>
+                      <Link to="#">CONTACT</Link>
                     </li>
                   </ul>
                 </div>
@@ -286,7 +285,7 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <div className="md:absolute md:w-full md:top-0 md:flex md:p-10 md:justify-between md:items-center md:h-full lg:pr-16">
-              <div className='w-1/3'>
+              <div className="w-1/3">
                 <Img
                   fluid={data.logoMap.childImageSharp.fluid}
                   className="w-full"
@@ -294,35 +293,37 @@ const LandingPage = () => {
                 />
               </div>
               <OperationBox className="">
-                <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">HOURS OF OPERATING</h4>
+                <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
+                  HOURS OF OPERATING
+                </h4>
                 <div className="">
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>MON</p>
-                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">MON</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>TUE</p>
-                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">TUE</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>WED</p>
-                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">WED</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>THUR</p>
-                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">THUR</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>FRI</p>
-                    <p className='w-2/3'>9:00 AM - 5:00 PM</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">FRI</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>SAT</p>
-                    <p className='w-2/3'>close</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">SAT</p>
+                    <p className="w-2/3">close</p>
                   </div>
-                  <div className='flex py-1 lg:py-2 font-semibold'>
-                    <p className='w-1/3'>Sun</p>
-                    <p className='w-2/3'>close</p>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">Sun</p>
+                    <p className="w-2/3">close</p>
                   </div>
                 </div>
               </OperationBox>
@@ -341,19 +342,29 @@ const LandingPage = () => {
               </Link>
             </li>
             <li className="px-4 font-semibold">
-              <Link className="text-white">ABOUT</Link>
+              <Link to="#" className="text-white">
+                ABOUT
+              </Link>
             </li>
             <li className="px-4 font-semibold">
-              <Link className="text-white">SERVICES</Link>
+              <Link to="#" className="text-white">
+                SERVICES
+              </Link>
             </li>
             <li className="px-4 font-semibold">
-              <Link className="text-white">CARPORTS</Link>
+              <Link to="#" className="text-white">
+                CARPORTS
+              </Link>
             </li>
             <li className="px-4 font-semibold">
-              <Link className="text-white">NEWS</Link>
+              <Link to="#" className="text-white">
+                NEWS
+              </Link>
             </li>
             <li className="px-4 font-semibold">
-              <Link className="text-white">CONTACT</Link>
+              <Link to="#" className="text-white">
+                CONTACT
+              </Link>
             </li>
           </ul>
           <p className="text-white font-semibold">
