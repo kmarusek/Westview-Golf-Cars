@@ -4,7 +4,9 @@ import tw from 'twin.macro'
 import { mediumScreen } from '../utils/utils'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Layout from '../components/layout'
 import Button from '../components/Button'
+import { Navs } from '../components/navs'
 import '../../static/style/global.scss'
 import './landingPage.scss'
 
@@ -98,7 +100,7 @@ const LandingPage = () => {
   `)
 
   return (
-    <>
+    <Layout>
       <div className="header-block">
         <div className="header-block content relative">
           <Img
@@ -121,25 +123,12 @@ const LandingPage = () => {
               <div className="menu">
                 <div className="menu__logo"></div>
                 <div className="menu__links">
-                  <ul>
-                    <li>
-                      <Link to="/">HOME</Link>
-                    </li>
-                    <li>
-                      <Link to="#">ABOUT</Link>
-                    </li>
-                    <li>
-                      <Link to="#">SERVICES</Link>
-                    </li>
-                    <li>
-                      <Link to="#">CARPORTS</Link>
-                    </li>
-                    <li>
-                      <Link to="#">NEWS</Link>
-                    </li>
-                    <li>
-                      <Link to="#">CONTACT</Link>
-                    </li>
+                  <ul className='hidden md:block'>
+                    {Navs.map(({text, to}, idx) => (
+                      <li key={`${text}-${idx}`}>
+                        <Link to={to} className='hidden md:block uppercase'>{text}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -372,7 +361,7 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 
