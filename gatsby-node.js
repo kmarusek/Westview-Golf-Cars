@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         totalCount
         edges {
           node {
-            updatedAt
+            productId
             title
             name
             price
@@ -50,13 +50,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create pages for each markdown file.
   const productTemplate = path.resolve('src/template/product.js')
   result.data.allContentfulProduct.edges.forEach(({ node }, index) => {
-    const path = `/products/${index + 1}`
+    const path = `/products/${node.productId}`
     createPage({
       path,
       component: productTemplate,
       // In your blog post template's graphql query, you can use pagePath
       // as a GraphQL variable to query for data from the markdown file.
       context: {
+        key: node.productId,
         product: node,
         pagePath: path,
       },
