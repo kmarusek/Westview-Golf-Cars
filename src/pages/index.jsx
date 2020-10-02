@@ -9,6 +9,7 @@ import Button from '../components/Button'
 import { Navs } from '../components/navs'
 import '../../static/style/global.scss'
 import './landingPage.scss'
+import Footer from '../components/footer'
 
 const HeroContainer = styled.div`
   position: absolute;
@@ -322,45 +323,7 @@ const LandingPage = () => {
       </div>
 
       {/* footer */}
-      <div className="mt-6 bg-black py-2 text-sm">
-        <div className="container w-full flex justify-between">
-          <ul className="max-w-xl flex flex-wrap">
-            <li className="px-4 font-semibold">
-              <Link to="/" className="text-white">
-                HOME
-              </Link>
-            </li>
-            <li className="px-4 font-semibold">
-              <Link to="#" className="text-white">
-                ABOUT
-              </Link>
-            </li>
-            <li className="px-4 font-semibold">
-              <Link to="#" className="text-white">
-                SERVICES
-              </Link>
-            </li>
-            <li className="px-4 font-semibold">
-              <Link to="#" className="text-white">
-                CARPORTS
-              </Link>
-            </li>
-            <li className="px-4 font-semibold">
-              <Link to="#" className="text-white">
-                NEWS
-              </Link>
-            </li>
-            <li className="px-4 font-semibold">
-              <Link to="#" className="text-white">
-                CONTACT
-              </Link>
-            </li>
-          </ul>
-          <p className="text-white font-semibold">
-            COPYRIGHT © WESTVIEW GOLF CARS 2020 | ABOVE MEDIA
-          </p>
-        </div>
-      </div>
+      <Footer />
     </Layout>
   )
 }

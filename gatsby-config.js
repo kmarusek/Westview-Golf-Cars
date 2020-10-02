@@ -53,7 +53,16 @@ module.exports = {
           include: /static\/svg/, 
         },
       },
-    }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `huqxhdgcoj8c`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'EUsX3VXdAq4Znzhtx3UmUcnJDEadvGYTBeb8JrEl88Q',
+        environment: 'master'
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
