@@ -2,9 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Westview Golf Cars`,
+    description: 'Sales, service (mobile available), and parts for golf cars. Also repairs on small engines,snowblowers, Chinese utility vehicles etc. Welding available as well.',
+    author: `abovemediateam`,
   },
   plugins: [
     `gatsby-plugin-jss`,

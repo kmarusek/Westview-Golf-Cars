@@ -7,9 +7,9 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Button from '../components/Button'
 import { Navs } from '../components/navs'
+import Footer from '../components/footer'
 import '../../static/style/global.scss'
 import './landingPage.scss'
-import Footer from '../components/footer'
 
 const HeroContainer = styled.div`
   position: absolute;

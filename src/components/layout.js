@@ -3,13 +3,14 @@ import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 
-const Layout = ({ children, title, }) => (
+const Layout = ({ children, title, description }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
@@ -29,11 +30,11 @@ const Layout = ({ children, title, }) => (
               gtag('config', 'UA-175978479-1');
             `}
           </script>
-          <meta name='description' content='Food Service Bags and Wraps - Quick Serve, Grocery, Bakery, Deli, Pharmacy, Fast Food, Concession' />
-          <meta property='og:site_name' content='Stewart Sutherland, Inc' />
+          <meta name='description' content={description || data.site.siteMetadata.description} />
+          <meta property='og:site_name' content='Westview Golf Cars' />
           <meta
             name='og:image'
-            content='https://res.cloudinary.com/ddfez1a0x/image/upload/c_scale,q_100,w_400/v1588734014/stewart-suntherland/SS-Logo_2020.jpg'
+            content='https://lh3.googleusercontent.com/p/AF1QipMO_XMipbRTzF_rQqxKQ3Ytqqkoql95hLFdEQk7=w600-h0'
           />
           <html lang='en' />
         </Helmet>

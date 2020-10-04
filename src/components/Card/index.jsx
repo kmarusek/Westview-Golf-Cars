@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import './myCard.scss'
-
 import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
   myCard: (src) => {
-    console.log(src)
     let background
     if (!!src)
       background = {
