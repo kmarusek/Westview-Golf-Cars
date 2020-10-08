@@ -27,7 +27,7 @@ const Header = () => {
 }
 
 const NavSmallItem = ({ text = 'Nav', to = '#', }) => (
-  <Link className='menu-item block py-2' to={to === '#' ? '/#' : to}>
+  <Link className='menu-item block py-2 font-semibold' to={to === '#' ? '/#' : to}>
     {text}
   </Link>
 )

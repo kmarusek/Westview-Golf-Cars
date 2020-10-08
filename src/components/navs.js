@@ -13,7 +13,7 @@ export const Navs = [
   },
   {
     text: 'Carports',
-    to: '#',
+    to: '/products',
   },
   {
     text: 'News',

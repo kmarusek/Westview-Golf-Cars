@@ -60,7 +60,8 @@ module.exports = {
         spaceId: `huqxhdgcoj8c`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: 'EUsX3VXdAq4Znzhtx3UmUcnJDEadvGYTBeb8JrEl88Q',
-        environment: 'master'
+        environment: 'master',
+        downloadLocal: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
