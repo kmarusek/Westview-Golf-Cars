@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React, { useCallback, useState } from 'react'
 import Footer from '../components/footer'
+import Header from '../components/header'
 import HeroLogo from '../components/hero-logo'
 import Layout from '../components/layout'
 import { Navs } from '../components/navs'
@@ -16,17 +17,21 @@ function Product({ pageContext }) {
   relatedImages.unshift(productImage)
   const [productImageShowing, onSetProductImage] = useState(productImage)
 
-  const onSelectImg = useCallback((idx) => {
-    const nextImg = relatedImages[idx]
-    onSetProductImage(nextImg)
-  }, [onSetProductImage, relatedImages])
+  const onSelectImg = useCallback(
+    (idx) => {
+      const nextImg = relatedImages[idx]
+      onSetProductImage(nextImg)
+    },
+    [onSetProductImage, relatedImages]
+  )
 
   return (
     <Layout>
+      <Header />
       <div className="container px-4">
         {/* header */}
         <div>
-          <div className="px-8 md:px-12 lg:px-24">
+          <div className="px-4">
             <div className="feedback">
               <div className="feedback__block">
                 <div className="feedback__block-phone-img"></div>
@@ -36,7 +41,7 @@ function Product({ pageContext }) {
               </div>
             </div>
           </div>
-          <div className="px-8 md:px-12 lg:px-24">
+          <div className="px-4">
             <div className="flex justify-center md:justify-between mt-6 md:mt-0">
               <div>
                 <HeroLogo />
@@ -46,7 +51,7 @@ function Product({ pageContext }) {
                   <li key={`${text}-${idx}`}>
                     <Link
                       to={to}
-                      className="uppercase px-4 md:px-8 inline-block h-10"
+                      className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
                     >
                       {text}
                     </Link>
@@ -59,9 +64,9 @@ function Product({ pageContext }) {
         {/* content */}
         <div className="flex flex-col lg:flex-row p-4">
           <div className="lg:w-2/5 px-4">
-            <img src={productImageShowing} alt='product-img' />
+            <img src={productImageShowing} alt="product-img" className='mb-4 mx-auto max-w-sm md:max-w-lg' />
             {relatedImages.length > 0 && (
-              <div className="flex mt-2">
+              <div className="flex mt-2 my-2 lg:my-0 justify-center lg:justify-start">
                 {relatedImages.map((url, idx) => {
                   function select() {
                     onSelectImg(idx)
@@ -72,13 +77,13 @@ function Product({ pageContext }) {
                     <img
                       key={`img-${idx}`}
                       src={url}
-                      className={`w-12 h-12 mr-1 cursor-pointer rounded${
+                      className={`w-16 h-16 mr-1 cursor-pointer rounded${
                         selected ? ' border-2 border-blue-500' : ''
                       }`}
                       onClick={select}
-                      role='button'
+                      role="button"
                       tabIndex="0"
-                      alt='related-img'
+                      alt="related-img"
                     />
                   )
                 })}
@@ -105,9 +110,8 @@ function Product({ pageContext }) {
             ))}
           </div>
         </div>
-
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   )
 }

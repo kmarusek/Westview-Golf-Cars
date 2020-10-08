@@ -1,10 +1,12 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import HeroLogo from '../components/hero-logo'
 import Layout from '../components/layout'
 import { Navs } from '../components/navs'
+import { mediumScreen } from '../utils/utils'
 
 const Sales = ({ pageContext }) => {
   const { products } = pageContext
@@ -12,10 +14,11 @@ const Sales = ({ pageContext }) => {
   return (
     <Layout>
       <Header />
-      <div className='px-4'>
-        <div className="container">
+      <div className="container px-4">
+        {/* header */}
+        <div className="">
           <div>
-            <div className="px-8">
+            <div className="px-4">
               <div className="feedback">
                 <div className="feedback__block">
                   <div className="feedback__block-phone-img"></div>
@@ -25,7 +28,7 @@ const Sales = ({ pageContext }) => {
                 </div>
               </div>
             </div>
-            <div className="px-8">
+            <div className="px-4">
               <div className="flex justify-center md:justify-between mt-6 md:mt-0">
                 <div>
                   <HeroLogo />
@@ -35,7 +38,7 @@ const Sales = ({ pageContext }) => {
                     <li key={`${text}-${idx}`}>
                       <Link
                         to={to}
-                        className="uppercase pl-4 md:pl-8 inline-block h-10"
+                        className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
                       >
                         {text}
                       </Link>
@@ -46,6 +49,7 @@ const Sales = ({ pageContext }) => {
             </div>
           </div>
         </div>
+        {/* section */}
         <div>
           <div className="bg-black text-white p-4">
             <h1
@@ -73,10 +77,18 @@ const Sales = ({ pageContext }) => {
           </div>
           <div className="container px-4 flex flex-wrap justify-center md:justify-between">
             {products.map((product) => (
-              <div key={product.productId} className='mb-4 md:mb-0'>
+              <div key={product.productId} className="mb-6 lg:mb-12">
                 <div className="max-w-xs">
-                  <Link to={`/products/${product.productId}`}>
-                    <img src={product.image.file.url} alt="product-img" />
+                  <Link
+                    className="w-full"
+                    to={`/products/${product.productId}`}
+                  >
+                    {/* <img src={product.image.file.url} alt="product-img" /> */}
+                    <Img
+                      fluid={product.image.fluid}
+                      alt="product-image"
+                      style={{ width: mediumScreen ? '16rem' : '20rem' }}
+                    />
                   </Link>
                 </div>
                 <p className="text-xl p-2 text-center font-semibold">
@@ -102,7 +114,6 @@ const Sales = ({ pageContext }) => {
           </div>
         </div>
       </div>
-
       <Footer />
     </Layout>
   )

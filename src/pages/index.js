@@ -110,7 +110,7 @@ const LandingPage = () => {
             alt="hero-image"
           />
           <HeroContainer>
-            <div className="px-8 md:px-12 lg:px-24">
+            <div className="px-4">
               <div className="feedback">
                 <div className="feedback__block">
                   <div className="feedback__block-phone-img"></div>
@@ -120,14 +120,16 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div className="px-8 md:px-12 lg:px-24">
+            <div className="px-4">
               <div className="menu">
                 <div className="menu__logo"></div>
                 <div className="menu__links">
-                  <ul className='hidden md:block'>
-                    {Navs.map(({text, to}, idx) => (
+                  <ul className="hidden md:block">
+                    {Navs.map(({ text, to }, idx) => (
                       <li key={`${text}-${idx}`}>
-                        <Link to={to} className='hidden md:block uppercase'>{text}</Link>
+                        <Link to={to} className="hidden md:block uppercase">
+                          {text}
+                        </Link>
                       </li>
                     ))}
                   </ul>

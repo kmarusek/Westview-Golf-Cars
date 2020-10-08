@@ -31,10 +31,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               file {
                 url
               }
+              fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+                sizes
+              }
             }
             image {
               file {
                 url
+              }
+              fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+                sizes
               }
             }
           }
