@@ -1,10 +1,23 @@
 import { Link } from 'gatsby'
 import React, { useCallback, useState } from 'react'
 import Footer from '../components/footer'
-import Header from '../components/header'
+import HeaderMobile from '../components/header-mobile'
 import HeroLogo from '../components/hero-logo'
 import Layout from '../components/layout'
 import { Navs } from '../components/navs'
+import LeftArrow from '../../static/svg/left-arrow.svg'
+
+const BackButton = React.forwardRef(({ children, ...props }, ref) => {
+  const onClick = (e) => {
+    e.preventDefault()
+    window.history.back()
+  }
+  return (
+    <a {...props} ref={ref} href="#" onClick={onClick}>
+      {children}
+    </a>
+  )
+})
 
 function Product({ pageContext }) {
   const { product } = pageContext
@@ -27,7 +40,7 @@ function Product({ pageContext }) {
 
   return (
     <Layout>
-      <Header />
+      <HeaderMobile />
       <div className="container px-4">
         {/* header */}
         <div>
@@ -64,7 +77,11 @@ function Product({ pageContext }) {
         {/* content */}
         <div className="flex flex-col lg:flex-row p-4">
           <div className="lg:w-2/5 px-4">
-            <img src={productImageShowing} alt="product-img" className='mb-4 mx-auto max-w-sm md:max-w-lg' />
+            <img
+              src={productImageShowing}
+              alt="product-img"
+              className="mb-4 mx-auto lg:mx-0 max-w-sm"
+            />
             {relatedImages.length > 0 && (
               <div className="flex mt-2 my-2 lg:my-0 justify-center lg:justify-start">
                 {relatedImages.map((url, idx) => {
@@ -89,6 +106,15 @@ function Product({ pageContext }) {
                 })}
               </div>
             )}
+            <BackButton>
+              <div
+                role="button"
+                className="ml-4 lg:ml-0 mt-2 lg:mt-4 pl-4 text-xl py-1 rounded font-semibold w-48 mb-4 flex items-center bg-primary inline"
+              >
+                <LeftArrow className="inline-block" />
+                <span className="ml-2">Go back</span>
+              </div>
+            </BackButton>
           </div>
           <div className="lg:w-3/5 p-8 pt-0">
             <p className="bg-primary text-xl p-2 text-center font-semibold">
@@ -108,6 +134,12 @@ function Product({ pageContext }) {
                 <br />
               </>
             ))}
+            <div
+              role="button"
+              className="mx-auto text-xl py-1 rounded font-semibold w-40 text-center bg-primary"
+            >
+              Contact
+            </div>
           </div>
         </div>
       </div>
