@@ -1,0 +1,1 @@
+export const mediumScreen = typeof window !== 'undefined' && window.innerWidth > 768;
