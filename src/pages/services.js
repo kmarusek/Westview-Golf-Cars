@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/footer'
 import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
 import Layout from '../components/layout'
@@ -20,7 +21,7 @@ const ServicesPage = () => {
       >
         Services
       </h1>
-      <div className="container my-6 max-w-4xl">
+      <div className="container my-6 max-w-4xl px-8 md:px-12 pb-12">
         <p className="my-4">
           Look, we get it. If you could drive the golf car or vehicle up to our
           door, then it wouldn’t need repairs in the first place. That’s why
@@ -42,6 +43,7 @@ const ServicesPage = () => {
           out recommendations for someone who can.
         </p>
       </div>
+      <Footer className='absolute bottom-0' />
     </Layout>
   )
 }

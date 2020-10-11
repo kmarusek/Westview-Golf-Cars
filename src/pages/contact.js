@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/footer'
 import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
 import Layout from '../components/layout'
@@ -20,7 +21,7 @@ const ContactPage = () => {
       >
         Contact
       </h1>
-      <div className="container my-6 max-w-4xl">
+      <div className="container my-6 max-w-4xl px-8 md:px-12">
         <p className="my-4">
           We’d love to help. If you have any questions about the cars, services,
           repairs, and rentals that we offer, please get in touch. Just give us
@@ -29,6 +30,7 @@ const ContactPage = () => {
         </p>
         <h2 className='font-semibold text-2xl text-center mt-6'>What can we do for you?</h2>
       </div>
+      <Footer className='absolute bottom-0' />
     </Layout>
   )
 }
