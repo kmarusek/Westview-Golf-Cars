@@ -9,7 +9,7 @@ export const Navs = [
   },
   {
     text: 'Services',
-    to: '#',
+    to: '/services',
   },
   {
     text: 'Carports',
@@ -21,7 +21,7 @@ export const Navs = [
   },
   {
     text: 'Contact',
-    to: '#',
+    to: '/contact',
   },
 ]
 

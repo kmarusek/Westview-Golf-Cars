@@ -5,6 +5,7 @@ module.exports = {
     title: `Westview Golf Cars`,
     description: 'Sales, service (mobile available), and parts for golf cars. Also repairs on small engines,snowblowers, Chinese utility vehicles etc. Welding available as well.',
     author: `abovemediateam`,
+    keywords: 'mechanical, electrical, welding services, hauling, trailer, golf car, repairs, maintenance'
   },
   plugins: [
     `gatsby-plugin-jss`,
