@@ -3,8 +3,56 @@ import Footer from '../components/footer'
 import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
 import Layout from '../components/layout'
+import withImageLightbox from '../components/HOC/with-light-box'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-const ServicesPage = () => {
+const ServicesPage = (props) => {
+  console.log(`ServicesPage -> props`, props)
+
+  const data = useStaticQuery(graphql`
+    query {
+      sub1: file(relativePath: { eq: "IMG_4811.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sub2: file(relativePath: { eq: "IMG_4812.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sub3: file(relativePath: { eq: "IMG_6390.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sub4: file(
+        relativePath: { eq: "IMG_6396.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sub5: file(relativePath: { eq: "IMG_6397.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  console.log(`ServicesPage -> data`, data)
+  
   return (
     <Layout
       title="Golf Cars Services | Remote Services"
@@ -21,7 +69,7 @@ const ServicesPage = () => {
       >
         Services
       </h1>
-      <div className="container my-6 max-w-4xl px-8 md:px-12 pb-12">
+      <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4">
         <p className="my-4">
           Look, we get it. If you could drive the golf car or vehicle up to our
           door, then it wouldn’t need repairs in the first place. That’s why
@@ -39,13 +87,26 @@ const ServicesPage = () => {
           We do all kinds of engine, mechanical, electrical, and welding
           services on golf cars and other vehicles. If you aren’t sure if it’s a
           job we can tackle, give us a call. We’ll be able to tell you quickly
-          whether or not we can do it—and if we can’t do it, we’re happy to pass
+          whether or not we can do it - and if we can’t do it, we’re happy to pass
           out recommendations for someone who can.
         </p>
       </div>
-      <Footer className='absolute bottom-0' />
+      <div className='flex flex-wrap justify-around max-w-4xl mx-auto pb-6'>
+        {Object.values(data).map((val, idx) => (
+          <div
+            className='w-56 mx-6 mb-4'
+            alt={`service-img-${idx}`}
+            key={`service-img-${idx}`}
+          >
+            <Img
+              fluid={val.childImageSharp.fluid}
+            />
+          </div>
+        ))}
+      </div>
+      <Footer className='bottom-0' />
     </Layout>
   )
 }
 
-export default ServicesPage
+export default withImageLightbox(ServicesPage)
