@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
@@ -6,9 +6,9 @@ import Layout from '../components/layout'
 import withImageLightbox from '../components/HOC/with-light-box'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import Lightbox from 'react-image-lightbox'
 
 const ServicesPage = (props) => {
-  console.log(`ServicesPage -> props`, props)
 
   const data = useStaticQuery(graphql`
     query {
@@ -33,9 +33,7 @@ const ServicesPage = (props) => {
           }
         }
       }
-      sub4: file(
-        relativePath: { eq: "IMG_6396.png" }
-      ) {
+      sub4: file(relativePath: { eq: "IMG_6396.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -51,8 +49,17 @@ const ServicesPage = (props) => {
       }
     }
   `)
-  console.log(`ServicesPage -> data`, data)
-  
+
+  const [photoIndex, setPhotoIdx] = useState(-1)
+
+  const onClickImg = useCallback((idx) => {
+    setPhotoIdx(idx)
+  })
+
+  const mainSrc = Object.values(data).map(
+    (val) => val.childImageSharp.fluid.src
+  )
+
   return (
     <Layout
       title="Golf Cars Services | Remote Services"
@@ -87,24 +94,47 @@ const ServicesPage = (props) => {
           We do all kinds of engine, mechanical, electrical, and welding
           services on golf cars and other vehicles. If you aren’t sure if it’s a
           job we can tackle, give us a call. We’ll be able to tell you quickly
-          whether or not we can do it - and if we can’t do it, we’re happy to pass
-          out recommendations for someone who can.
+          whether or not we can do it - and if we can’t do it, we’re happy to
+          pass out recommendations for someone who can.
         </p>
       </div>
-      <div className='flex flex-wrap justify-around max-w-4xl mx-auto pb-6'>
+      <div className="flex flex-wrap justify-around max-w-4xl mx-auto pb-6">
         {Object.values(data).map((val, idx) => (
           <div
-            className='w-56 mx-6 mb-4'
+            className="w-56 mx-6 mb-4 cursor-pointer"
+            role="button"
+            tabIndex={idx}
             alt={`service-img-${idx}`}
             key={`service-img-${idx}`}
+            onClick={() => onClickImg(3000 + idx)}
           >
-            <Img
-              fluid={val.childImageSharp.fluid}
-            />
+            <Img fluid={val.childImageSharp.fluid} />
           </div>
         ))}
       </div>
-      <Footer className='bottom-0' />
+      {photoIndex >= 0 && (
+        <Lightbox
+          mainSrc={mainSrc[photoIndex % mainSrc.length]}
+          nextSrc={mainSrc[photoIndex % mainSrc.length]}
+          prevSrc={mainSrc[photoIndex % mainSrc.length]}
+          // nextSrc={mainSrc[(photoIndex + 1) % mainSrc.length]}
+          // prevSrc={mainSrc[(photoIndex + mainSrc.length - 1) % mainSrc.length]}
+          enableZoom={false}
+          onCloseRequest={() => setPhotoIdx(-1)}
+          reactModalStyle={{
+            overlay: {
+              zIndex: 3000,
+            },
+          }}
+          onMovePrevRequest={() =>
+            setPhotoIdx(v => v - 1)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIdx(v => v + 1)
+          }
+        />
+      )}
+      <Footer className="bottom-0" />
     </Layout>
   )
 }
