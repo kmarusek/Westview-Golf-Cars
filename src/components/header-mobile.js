@@ -27,7 +27,7 @@ const HeaderMobile = () => {
 }
 
 const NavSmallItem = ({ text = 'Nav', to = '#', }) => (
-  <Link className='menu-item block py-2 font-semibold' to={to === '#' ? '/#' : to}>
+  <Link className='menu-item block py-2 font-semibold text-2xl' to={to === '#' ? '/#' : to}>
     {text}
   </Link>
 )

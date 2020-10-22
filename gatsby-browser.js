@@ -8,3 +8,4 @@
 
 import './static/style/styles.css'
 import './static/style/menu.css'
+import 'react-image-lightbox/style.css'
