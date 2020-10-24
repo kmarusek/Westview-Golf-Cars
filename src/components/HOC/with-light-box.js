@@ -36,7 +36,7 @@ const LightboxHOCWrapper = (Child) => {
 
     render() {
       const { photoIndex, images, isOpen } = this.state;
-      console.log(`render -> images`, images)
+
       return (
         <>
           <Child {...this.props} lightbox={this.lightbox} />

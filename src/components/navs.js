@@ -8,6 +8,10 @@ export const Navs = [
     to: '#',
   },
   {
+    text: 'For sale',
+    to: '/for-sale'
+  },
+  {
     text: 'Services',
     to: '/services',
   },
@@ -16,12 +20,12 @@ export const Navs = [
     to: '/products',
   },
   {
-    text: 'News',
-    to: '#',
-  },
-  {
     text: 'Contact',
     to: '/contact',
+  },
+  {
+    text: 'News',
+    to: '#',
   },
 ]
 

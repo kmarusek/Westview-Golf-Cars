@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Navs } from './navs'
 import HeroLogo from './hero-logo'
+import Dropdown from './dropdown'
 
 const Header = () => {
   return (
@@ -22,17 +23,44 @@ const Header = () => {
             <div>
               <HeroLogo />
             </div>
-            <ul className="hidden md:flex md:flex-wrap w-full pl-10 justify-around items-center">
-              {Navs.map(({ text, to }, idx) => (
-                <li key={`${text}-${idx}`}>
-                  <Link
-                    to={to}
-                    className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
+            <ul className="hidden md:flex md:flex-wrap w-full pl-10 justify-around pt-10 xl:pt-20">
+              {Navs.map(({ text, to }, idx) => {
+                if (text !== 'Services') {
+                  return (
+                    <li key={`${text}-${idx}`}>
+                      <Link
+                        to={to}
+                        className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
+                      >
+                        {text}
+                      </Link>
+                    </li>
+                  )
+                }
+                return (
+                  <li
+                    key={`${text}-${idx}`}
                   >
-                    {text}
-                  </Link>
-                </li>
-              ))}
+
+                  <Dropdown
+                    menuOptions={[
+                      {
+                        text: 'Home',
+                        to: '/',
+                      },
+                      {
+                        text: 'About',
+                        to: '#',
+                      },
+                    ]}
+                  >
+                    <p className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg">
+                      Services
+                    </p>
+                  </Dropdown>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>

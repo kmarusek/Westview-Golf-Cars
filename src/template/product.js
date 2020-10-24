@@ -65,6 +65,7 @@ function Product({ pageContext }) {
                     <Link
                       to={to}
                       className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
+                      key={`${to}-${idx}`}
                     >
                       {text}
                     </Link>
@@ -129,10 +130,10 @@ function Product({ pageContext }) {
               })}
             </p>
             {description.map((d, idx) => (
-              <>
-                <p key={`description-${idx}`}>{d}</p>
+              <div key={`description-${idx}`}>
+                <p>{d}</p>
                 <br />
-              </>
+              </div>
             ))}
             <div
               role="button"
