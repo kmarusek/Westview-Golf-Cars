@@ -17,6 +17,10 @@ module.exports = {
         dark: 'var(--dark)',
         'dark-light': 'var(--dark-light)',
       },
+      width: {
+        '28': '7rem',
+        '36': '9rem'
+      }
     },
     container: {
       center: true,

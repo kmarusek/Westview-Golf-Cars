@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   createPage({
     path: '/for-sale',
-    component: path.resolve(`src/template/products.js`),
+    component: path.resolve(`src/template/for-sale.js`),
     context: {
       products: result.data.allContentfulProduct.edges.map(({ node }) => node),
       pagePath: '/for-sale',

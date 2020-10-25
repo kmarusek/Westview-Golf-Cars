@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Navs } from './navs'
+import { Navs, ServiceNav } from './navs'
 import HeroLogo from './hero-logo'
 import Dropdown from './dropdown'
 
@@ -30,7 +30,7 @@ const Header = () => {
                     <li key={`${text}-${idx}`}>
                       <Link
                         to={to}
-                        className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg"
+                        className={`uppercase pl-4 md:pl-8 lg:pl-16 ${text !== 'Carports' ? 'xl:pl-8' : 'xl:pl-0'} inline-block h-10 font-semibold text-lg`}
                       >
                         {text}
                       </Link>
@@ -38,26 +38,12 @@ const Header = () => {
                   )
                 }
                 return (
-                  <li
-                    key={`${text}-${idx}`}
-                  >
-
-                  <Dropdown
-                    menuOptions={[
-                      {
-                        text: 'Home',
-                        to: '/',
-                      },
-                      {
-                        text: 'About',
-                        to: '#',
-                      },
-                    ]}
-                  >
-                    <p className="uppercase pl-4 md:pl-8 inline-block h-10 font-semibold text-lg">
+                  <li key={`${text}-${idx}`}>
+                    <Dropdown
+                      menuOptions={ServiceNav}
+                    >
                       Services
-                    </p>
-                  </Dropdown>
+                    </Dropdown>
                   </li>
                 )
               })}

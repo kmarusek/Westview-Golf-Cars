@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { TiArrowSortedUp } from 'react-icons/ti'
 
 const DropdownWrapper = styled.div`
-  cursor: pointer
+  cursor: pointer;
+  padding-right: 2px;
 `
 
 const Dropdown = (props) => {
@@ -21,11 +23,11 @@ const Dropdown = (props) => {
     if (!current) return
 
     const handleFocus = () => {
-      current.classList.add('active');
+      current.classList.add('open');
     }
 
     const handleBlur = () => {
-      current.classList.remove('active');
+      current.classList.remove('open');
     }
 
     current.addEventListener('focus', handleFocus);
@@ -44,7 +46,7 @@ const Dropdown = (props) => {
 
   const renderOptions = useMemo(() => {
     return menuOptions.map((menu, idx) => (
-      <div key={`menu-${idx}`}>
+      <div key={`menu-${idx}`} className='py-2'>
         <Link to={menu.to} className="text-black">
           {menu.text}
         </Link>
@@ -53,9 +55,10 @@ const Dropdown = (props) => {
   }, [menuOptions])
 
   return(
-    <DropdownWrapper ref={wrapperRef} onClick={openDropdown} role='button' tabIndex='0'>
-      {children}
-      <div className='text-right'>
+    <DropdownWrapper ref={wrapperRef} onClick={openDropdown} role='button' className={`pl-6 w-40 ${showOptions ? '' : ''}`}>
+      <p className='text-right uppercase font-semibold text-lg inline-block'>{children}</p>
+      <TiArrowSortedUp className={`inline-block -mt-2 mx-2 text-lg transition duration-300 ${showOptions ? 'transform rotate-180': ''}`} />
+      <div className='text-right '>
         {showOptions ? renderOptions : null}
       </div>
     </DropdownWrapper>

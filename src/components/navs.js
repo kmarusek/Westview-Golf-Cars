@@ -17,7 +17,7 @@ export const Navs = [
   },
   {
     text: 'Carports',
-    to: '/products',
+    to: '/car-ports',
   },
   {
     text: 'Contact',
@@ -26,6 +26,25 @@ export const Navs = [
   {
     text: 'News',
     to: '#',
+  },
+]
+
+export const ServiceNav = [
+  {
+    text: 'Small Engine Repair',
+    to: '/small-engine-repair'
+  },
+  {
+    text: 'Welding Services',
+    to: '/welding-services'
+  },
+  {
+    text: 'Remote Services',
+    to: '/remote-services'
+  },
+  {
+    text: 'Golf Car Rentals',
+    to: '/gold-car-rentals'
   },
 ]
 
