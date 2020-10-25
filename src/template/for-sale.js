@@ -78,7 +78,7 @@ const Sales = ({ pageContext }) => {
           ))}
         </div>
       </div>
-      <Footer />
+      <Footer className='bottom-0' />
     </Layout>
   )
 }

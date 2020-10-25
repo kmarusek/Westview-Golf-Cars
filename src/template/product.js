@@ -13,7 +13,12 @@ const BackButton = React.forwardRef(({ children, ...props }, ref) => {
     window.history.back()
   }
   return (
-    <a {...props} ref={ref} href="#" onClick={onClick}>
+    <a
+      {...props}
+      ref={ref}
+      href={typeof window !== 'undefined' ? document.referrer : ''}
+      onClick={onClick}
+    >
       {children}
     </a>
   )
@@ -99,6 +104,7 @@ function Product({ pageContext }) {
                         selected ? ' border-2 border-blue-500' : ''
                       }`}
                       onClick={select}
+                      onKeyPress={select}
                       role="button"
                       tabIndex="0"
                       alt="related-img"

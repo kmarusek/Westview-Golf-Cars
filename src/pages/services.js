@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
@@ -54,7 +54,7 @@ const ServicesPage = (props) => {
 
   const onClickImg = useCallback((idx) => {
     setPhotoIdx(idx)
-  })
+  }, [setPhotoIdx])
 
   const mainSrc = Object.values(data).map(
     (val) => val.childImageSharp.fluid.src
@@ -97,21 +97,21 @@ const ServicesPage = (props) => {
           whether or not we can do it - and if we can’t do it, we’re happy to
           pass out recommendations for someone who can.
         </p>
-        <h2 className='uppercase font-bold text-lg text-center tracking-widest'>Our services include the following</h2>
+        <h2 className='uppercase font-bold text-lg text-center tracking-widest pt-4'>Our services include the following</h2>
       </div>
-      <div className="max-w-6xl uppercase mx-auto flex justify-around px-4 lg:px-0 pb-4">
+      <div className="max-w-6xl uppercase mx-auto flex justify-around px-4 lg:px-0 pb-8 flex-wrap">
         <Link to='/small-engine-repair'>
-          <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+          <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
             Small engine repair
           </button>
         </Link>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
           Golf car rentals
         </button>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
           Remote service
         </button>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
           Welding Service
         </button>
       </div>

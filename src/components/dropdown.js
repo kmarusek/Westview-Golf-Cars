@@ -42,7 +42,7 @@ const Dropdown = (props) => {
   const openDropdown = useCallback(() => {
     setShowOptions(true)
     document.addEventListener('click', closeMenu)
-  }, [setShowOptions])
+  }, [setShowOptions, closeMenu])
 
   const renderOptions = useMemo(() => {
     return menuOptions.map((menu, idx) => (

@@ -16,7 +16,7 @@ const LogoWrapper = styled.div`
 const HeroLogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "imageLogoAdreas.png" }) {
+      file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
