@@ -18,7 +18,10 @@ const HeroContainer = styled.div`
 `
 
 const CardImg = styled.div`
-  ${tw`text-white absolute top-0 h-full flex flex-col text-center justify-center items-center`}
+  ${tw`text-white absolute top-0 h-full flex flex-col text-center justify-center items-center transition duration-300`}
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 `
 
 const CardService = styled.div`
@@ -101,7 +104,10 @@ const LandingPage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout
+      title='Westview Golf Cars'
+      description='It matters how you drive. Westview Golf Cars specializes in golf car repair, custom golf car builds, and steel golf car carports.'
+    >
       <div className="header-block">
         <div className="header-block content relative">
           <Img

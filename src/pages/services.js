@@ -4,7 +4,7 @@ import Header from '../components/header'
 import HeaderMobile from '../components/header-mobile'
 import Layout from '../components/layout'
 import withImageLightbox from '../components/HOC/with-light-box'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Lightbox from 'react-image-lightbox'
 
@@ -76,7 +76,7 @@ const ServicesPage = (props) => {
       >
         Services
       </h1>
-      <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4">
+      <div className="container my-6 max-w-4xl px-8 md:px-12">
         <p className="my-4">
           Look, we get it. If you could drive the golf car or vehicle up to our
           door, then it wouldn’t need repairs in the first place. That’s why
@@ -97,6 +97,23 @@ const ServicesPage = (props) => {
           whether or not we can do it - and if we can’t do it, we’re happy to
           pass out recommendations for someone who can.
         </p>
+        <h2 className='uppercase font-bold text-lg text-center tracking-widest'>Our services include the following</h2>
+      </div>
+      <div className="max-w-6xl uppercase mx-auto flex justify-around px-4 lg:px-0 pb-4">
+        <Link to='/small-engine-repair'>
+          <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+            Small engine repair
+          </button>
+        </Link>
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+          Golf car rentals
+        </button>
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+          Remote service
+        </button>
+        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold">
+          Welding Service
+        </button>
       </div>
       <div className="flex flex-wrap justify-around max-w-4xl mx-auto pb-6">
         {Object.values(data).map((val, idx) => (

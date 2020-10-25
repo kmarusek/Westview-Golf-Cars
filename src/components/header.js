@@ -5,6 +5,8 @@ import HeroLogo from './hero-logo'
 import Dropdown from './dropdown'
 
 const Header = () => {
+  const path = typeof window !== 'undefined' ? window.location.pathname : ''
+  
   return (
     <div className="">
       <div>
@@ -25,12 +27,13 @@ const Header = () => {
             </div>
             <ul className="hidden md:flex md:flex-wrap w-full pl-10 justify-around pt-10 xl:pt-20">
               {Navs.map(({ text, to }, idx) => {
-                if (text !== 'Services') {
+                const isCartPortRoute = !(text !== 'Services' || !path.startsWith('/services'))
+                if (!isCartPortRoute) {
                   return (
                     <li key={`${text}-${idx}`}>
                       <Link
                         to={to}
-                        className={`uppercase pl-4 md:pl-8 lg:pl-16 ${text !== 'Carports' ? 'xl:pl-8' : 'xl:pl-0'} inline-block h-10 font-semibold text-lg`}
+                        className={`uppercase pl-4 md:pl-8 lg:pl-16 ${text !== 'Carports' && path.startsWith('/services') ? 'xl:pl-8' : 'xl:pl-0'} inline-block h-10 font-semibold text-lg`}
                       >
                         {text}
                       </Link>
@@ -38,7 +41,7 @@ const Header = () => {
                   )
                 }
                 return (
-                  <li key={`${text}-${idx}`}>
+                  <li key={`${text}-${idx}`} style={{height: 212}}>
                     <Dropdown
                       menuOptions={ServiceNav}
                     >
