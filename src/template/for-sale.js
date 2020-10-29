@@ -6,8 +6,10 @@ import HeaderMobile from '../components/header-mobile'
 import Layout from '../components/layout'
 import { mediumScreen } from '../utils/utils'
 import Header from '../components/header'
+import { useWindowSize } from '../utils/hook'
 
 const Sales = ({ pageContext }) => {
+  const { screen } = useWindowSize()
   const { products } = pageContext
 
   return (
@@ -52,7 +54,7 @@ const Sales = ({ pageContext }) => {
                   <Img
                     fluid={product.image.fluid}
                     alt="product-image"
-                    style={{ width: mediumScreen ? '16rem' : '20rem' }}
+                    style={{ width: screen === 'sm' ? '16rem' : '20rem' }}
                   />
                 </Link>
               </div>

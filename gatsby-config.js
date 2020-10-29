@@ -43,8 +43,8 @@ module.exports = {
         tailwind: true, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
-        ignore: ['/src/pages/landingPage.scss'],
-        purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+        // ignore: ['/src/pages/landingPage.scss'],
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
     {
