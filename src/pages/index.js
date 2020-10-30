@@ -123,8 +123,8 @@ const LandingPage = () => {
 
   return (
     <Layout
-      title='Westview Golf Cars'
-      description='It matters how you drive. Westview Golf Cars specializes in golf car repair, custom golf car builds, and steel golf car carports.'
+      title="Westview Golf Cars"
+      description="It matters how you drive. Westview Golf Cars specializes in golf car repair, custom golf car builds, and steel golf car carports."
     >
       <div className="header-block">
         <div className="header-block content relative">
@@ -166,12 +166,14 @@ const LandingPage = () => {
       <div className="desc">GOLF CARS</div>
       <div className="container">
         <div className="p-4 lg:p-6">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-          molestie consequat.
+          <p className="text-lg">
+            It’s more than the easiest way to get around the course. A great
+            golf car gives you style and confidence from the tee box to the
+            green. We’re not sure how many strokes the perfect golf car can
+            shave off your game, but we like to think it’s just as important
+            as the right set of clubs. Drive more confidently, swing more
+            confidently.
+          </p>
         </div>
         <div className="row-cards1 p-4 lg:p-6">
           <div className="relative">
@@ -182,10 +184,9 @@ const LandingPage = () => {
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem, similique.
+                Perfect for shorter range driving. Easier to maintain than gas.
               </p>
-              <Button className="margin-top1">LOREM IPSUM</Button>
+              <Button className="margin-top1">Electric Golf Cars</Button>
             </CardImg>
           </div>
           <div className="relative">
@@ -196,10 +197,9 @@ const LandingPage = () => {
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem, similique.
+                Ideal if you need a longer range and more power.
               </p>
-              <Button className="margin-top1">LOREM IPSUM</Button>
+              <Button className="margin-top1">Gas Golf Cars</Button>
             </CardImg>
           </div>
           <div className="relative">
@@ -210,10 +210,9 @@ const LandingPage = () => {
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem, similique.
+                Want something specific? We’ll design a car you love.
               </p>
-              <Button className="margin-top1">LOREM IPSUM</Button>
+              <Button className="margin-top1">Custom Golf Cars</Button>
             </CardImg>
           </div>
         </div>
@@ -234,7 +233,9 @@ const LandingPage = () => {
               <p className="text-4xl font-extrabold uppercase">
                 Small Engine Repair
               </p>
-              <Button className="mt-4">LOREM IPSUM</Button>
+              <Link to='/small-engine-repair'>
+                <Button className="mt-4 py-4">Get it Fixed</Button>
+              </Link>
             </CardImg>
           </CardService>
           <CardService className="md:pl-4">
@@ -248,7 +249,9 @@ const LandingPage = () => {
               <p className="text-4xl font-extrabold uppercase">
                 Carrot Installations
               </p>
-              <Button className="mt-4">LOREM IPSUM</Button>
+              <Link to='/car-ports'>
+                <Button className="mt-4">Store Your car</Button>
+              </Link>
             </CardImg>
           </CardService>
         </div>
@@ -350,15 +353,17 @@ const LandingPage = () => {
 
         <div className="mt-4 container">
           <div className="px-4 lg:px-6 flex">
-            <div className='w-1/3 px-4 py-20'>
+            <div className="w-1/3 px-4 py-20">
               <Img
                 fluid={data.logo.childImageSharp.fluid}
                 className="w-full"
                 alt="hero-image"
               />
-              <Link to='#'>
-                <Button className="mt-4">Get directions</Button>
-              </Link>
+              <div className="text-center mt-4">
+                <Link to="#">
+                  <Button className="mt-4">Get directions</Button>
+                </Link>
+              </div>
             </div>
             <div className="w-1/3">
               <Img
@@ -367,7 +372,7 @@ const LandingPage = () => {
                 alt="hero-image"
               />
             </div>
-            <div className='w-1/3'>
+            <div className="w-1/3">
               <OperationBoxV2 className="">
                 <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
                   HOURS OF OPERATING
