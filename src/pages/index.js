@@ -41,6 +41,10 @@ const OperationBox = styled.div`
   ${tw`text-white p-6 xl:p-10 uppercase`}
 `
 
+const OperationBoxV2 = styled.div`
+  ${tw`text-black mx-4 p-6 xl:p-10 uppercase border-2 border-black`}
+`
+
 const LandingPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -96,6 +100,20 @@ const LandingPage = () => {
       logoMap: file(relativePath: { eq: "imageLogoAdreas.png" }) {
         childImageSharp {
           fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imageMap: file(relativePath: { eq: "imageMap.png" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -275,7 +293,8 @@ const LandingPage = () => {
             </div>
           </div>
         </div> */}
-        <div className="mt-4 container">
+        {/* old footer */}
+        {/* <div className="mt-4 container">
           <div className="px-4 lg:px-6 relative">
             <Img
               fluid={data.locationMap.childImageSharp.fluid}
@@ -325,6 +344,65 @@ const LandingPage = () => {
                   </div>
                 </div>
               </OperationBox>
+            </div>
+          </div>
+        </div> */}
+
+        <div className="mt-4 container">
+          <div className="px-4 lg:px-6 flex">
+            <div className='w-1/3 px-4 py-20'>
+              <Img
+                fluid={data.logo.childImageSharp.fluid}
+                className="w-full"
+                alt="hero-image"
+              />
+              <Link to='#'>
+                <Button className="mt-4">Get directions</Button>
+              </Link>
+            </div>
+            <div className="w-1/3">
+              <Img
+                fluid={data.imageMap.childImageSharp.fluid}
+                className="w-full"
+                alt="hero-image"
+              />
+            </div>
+            <div className='w-1/3'>
+              <OperationBoxV2 className="">
+                <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
+                  HOURS OF OPERATING
+                </h4>
+                <div className="">
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">MON</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">TUE</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">WED</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">THUR</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">FRI</p>
+                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">SAT</p>
+                    <p className="w-2/3">close</p>
+                  </div>
+                  <div className="flex py-1 lg:py-2 font-semibold">
+                    <p className="w-1/3">Sun</p>
+                    <p className="w-2/3">close</p>
+                  </div>
+                </div>
+              </OperationBoxV2>
             </div>
           </div>
         </div>

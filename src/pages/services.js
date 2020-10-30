@@ -105,9 +105,11 @@ const ServicesPage = (props) => {
             Small engine repair
           </button>
         </Link>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
-          Golf car rentals
-        </button>
+        <Link to='/gold-car-rentals'>
+          <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
+            Golf car rentals
+          </button>
+        </Link>
         <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
           Remote service
         </button>
@@ -125,7 +127,7 @@ const ServicesPage = (props) => {
             key={`service-img-${idx}`}
             onClick={() => onClickImg(3000 + idx)}
           >
-            <Img fluid={val.childImageSharp.fluid} />
+            <Img fluid={val.childImageSharp.fluid} alt='service-img' />
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ export const Navs = [
   },
   {
     text: 'About',
-    to: '#',
+    to: '/about',
   },
   {
     text: 'For sale',

@@ -58,7 +58,7 @@ const CarPortsPage = () => {
           Starting at $1220. For more pricing information, please get in touch.
         </p>
         <div className='max-w-xl mx-auto'>
-          <Img fluid={data.authorized_dealer.childImageSharp.fluid} />
+          <Img fluid={data.authorized_dealer.childImageSharp.fluid} alt='car-ports' />
         </div>
       </div>
       <Footer className="bottom-0" />
