@@ -110,7 +110,7 @@ const ServicesPage = (props) => {
             Golf car rentals
           </button>
         </Link>
-        <Link to='/remote-service'>
+        <Link to='/remote-services'>
           <button className="bg-black text-white p-2 w-40 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
             Remote service
           </button>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Footer = ({className}) => {
+const Footer = ({className = ''}) => {
   return (
     <div className={`mt-6 bg-black py-2 text-sm w-full ${className}`}>
       <div className="container w-full md:flex md:justify-between">

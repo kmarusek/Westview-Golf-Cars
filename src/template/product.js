@@ -44,7 +44,10 @@ function Product({ pageContext }) {
   )
 
   return (
-    <Layout>
+    <Layout
+      title='Westview Golf Cars | For Sale'
+      description='We sell new and refurbished gas, electric, and custom golf cars. If you’re looking for a custom golf car, get in touch and we’ll build something you love.'
+    >
       <HeaderMobile />
       <div className="container px-4">
         {/* header */}
@@ -152,7 +155,7 @@ function Product({ pageContext }) {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer className="md:absolute bottom-0" />
     </Layout>
   )
 }
