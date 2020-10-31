@@ -136,12 +136,14 @@ const LandingPage = () => {
           <HeroContainer>
             <div className="px-4">
               <div className="feedback">
-                <div className="feedback__block">
-                  <div className="feedback__block-phone-img"></div>
-                  <div className="feedback__block-phone-number">
-                    269 - 555 - 5555
+                <a href='tel:2695555555'>
+                  <div className="feedback__block">
+                    <div className="feedback__block-phone-img"></div>
+                    <div className="feedback__block-phone-number">
+                      269 - 555 - 5555
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div className="px-4">
@@ -257,8 +259,8 @@ const LandingPage = () => {
         </div>
         {/* divider */}
 
-        <div className="mt-4 px-4 lg:px-6">
-          <div className="delimiter">
+        <div className="mt-4 px-4 h-16 lg:px-6">
+          <div className="py-1 px-4 bg-primary flex justify-center items-center font-bold text-white">
             CALL OR COME IN TODAY | 269 - 555 - 5555
           </div>
         </div>
@@ -352,8 +354,8 @@ const LandingPage = () => {
         </div> */}
 
         <div className="mt-4 container">
-          <div className="px-4 lg:px-6 flex">
-            <div className="w-1/3 px-4 py-20">
+          <div className="px-4 lg:px-6 flex flex-col md:flex-row">
+            <div className="md:w-1/3 px-4 py-10 md:py-16 lg:py-20">
               <Img
                 fluid={data.logo.childImageSharp.fluid}
                 className="w-full"
@@ -365,14 +367,14 @@ const LandingPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-1/3">
+            <div className="md:w-1/3">
               <Img
                 fluid={data.imageMap.childImageSharp.fluid}
                 className="w-full"
                 alt="hero-image"
               />
             </div>
-            <div className="w-1/3">
+            <div className="md:w-1/3 mt-4 md:mt-0">
               <OperationBoxV2 className="">
                 <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
                   HOURS OF OPERATING

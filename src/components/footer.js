@@ -12,17 +12,17 @@ const Footer = ({className}) => {
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <Link to="#" className="text-white">
+            <Link to="/about" className="text-white">
               ABOUT
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <Link to="#" className="text-white">
+            <Link to="/services" className="text-white">
               SERVICES
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <Link to="#" className="text-white">
+            <Link to="/car-ports" className="text-white">
               CARPORTS
             </Link>
           </li>
@@ -32,7 +32,7 @@ const Footer = ({className}) => {
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <Link to="#" className="text-white">
+            <Link to="/contact" className="text-white">
               CONTACT
             </Link>
           </li>

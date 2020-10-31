@@ -106,16 +106,20 @@ const ServicesPage = (props) => {
           </button>
         </Link>
         <Link to='/gold-car-rentals'>
-          <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
+          <button className="bg-black text-white p-2 w-40 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
             Golf car rentals
           </button>
         </Link>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
-          Remote service
-        </button>
-        <button className="bg-black text-white p-2 w-48 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
-          Welding Service
-        </button>
+        <Link to='/remote-service'>
+          <button className="bg-black text-white p-2 w-40 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
+            Remote service
+          </button>
+        </Link>
+        <Link to='/welding-services'>
+          <button className="bg-black text-white p-2 w-40 px-4 tracking-widest uppercase font-semibold m-4 md:m-0">
+            Welding Service
+          </button>
+        </Link>
       </div>
       <div className="flex flex-wrap justify-around max-w-4xl mx-auto pb-6">
         {Object.values(data).map((val, idx) => (
