@@ -177,15 +177,13 @@ body {
         a {
           color: black;
           font-weight: 700;
-          font-size: 1.25rem;
           padding-left: 2rem;
         }
-        a:last-child {
+        a .index:last-child {
           padding-right: 0;
         }
         a:hover {
           cursor: pointer;
-          color: $hover;
           text-decoration: none;
         }
       }

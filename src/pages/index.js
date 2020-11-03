@@ -6,8 +6,9 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Button from '../components/Button'
-import { Navs } from '../components/navs'
+import { Navs, ServiceNav } from '../components/navs'
 import Footer from '../components/footer'
+import Dropdown from '../components/dropdown'
 import '../../static/style/global.scss'
 import './landingPage.scss'
 
@@ -136,7 +137,7 @@ const LandingPage = () => {
           <HeroContainer>
             <div className="px-4">
               <div className="feedback">
-                <a href='tel:2695555555'>
+                <a href="tel:2695555555">
                   <div className="feedback__block">
                     <div className="feedback__block-phone-img"></div>
                     <div className="feedback__block-phone-number">
@@ -151,13 +152,29 @@ const LandingPage = () => {
                 <div className="menu__logo"></div>
                 <div className="menu__links">
                   <ul className="hidden md:block">
-                    {Navs.map(({ text, to }, idx) => (
-                      <li key={`${text}-${idx}`}>
-                        <Link to={to} className="hidden md:block uppercase">
-                          {text}
-                        </Link>
-                      </li>
-                    ))}
+                    {Navs.map(({ text, to }, idx) => {
+                      if (text !== 'Services') {
+                        return (
+                          <li key={`${text}-${idx}`}>
+                            <Link to={to} className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index">
+                              {text}
+                            </Link>
+                          </li>
+                        )
+                      }
+                      return (
+                        <li key={`${text}-${idx}`}>
+                          <Dropdown menuOptions={ServiceNav}>
+                            <Link
+                              to={to}
+                              className="text-right uppercase font-semibold text-lg inline-block hover:text-dark-light-2"
+                            >
+                              Services
+                            </Link>
+                          </Dropdown>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -172,8 +189,8 @@ const LandingPage = () => {
             It’s more than the easiest way to get around the course. A great
             golf car gives you style and confidence from the tee box to the
             green. We’re not sure how many strokes the perfect golf car can
-            shave off your game, but we like to think it’s just as important
-            as the right set of clubs. Drive more confidently, swing more
+            shave off your game, but we like to think it’s just as important as
+            the right set of clubs. Drive more confidently, swing more
             confidently.
           </p>
         </div>
@@ -198,9 +215,7 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>
-                Ideal if you need a longer range and more power.
-              </p>
+              <p>Ideal if you need a longer range and more power.</p>
               <Button className="margin-top1">Gas Golf Cars</Button>
             </CardImg>
           </div>
@@ -211,9 +226,7 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>
-                Want something specific? We’ll design a car you love.
-              </p>
+              <p>Want something specific? We’ll design a car you love.</p>
               <Button className="margin-top1">Custom Golf Cars</Button>
             </CardImg>
           </div>
@@ -235,7 +248,7 @@ const LandingPage = () => {
               <p className="text-4xl font-extrabold uppercase">
                 Small Engine Repair
               </p>
-              <Link to='/small-engine-repair'>
+              <Link to="/small-engine-repair">
                 <Button className="mt-4 py-4">Get it Fixed</Button>
               </Link>
             </CardImg>
@@ -251,7 +264,7 @@ const LandingPage = () => {
               <p className="text-4xl font-extrabold uppercase">
                 Carrot Installations
               </p>
-              <Link to='/car-ports'>
+              <Link to="/car-ports">
                 <Button className="mt-4">Store Your car</Button>
               </Link>
             </CardImg>

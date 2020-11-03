@@ -65,7 +65,7 @@ const Dropdown = (props) => {
       <Link
         to={menu.to}
         key={`menu-${idx}`}
-        className="p-2 px-4 block text-black hover:bg-primary hover:text-white"
+        className="p-2 px-4 block text-black hover:bg-primary hover:text-white text-base"
       >
         {menu.text}
       </Link>
