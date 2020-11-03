@@ -29,13 +29,13 @@ const Header = () => {
             </div>
             <ul className="hidden md:flex md:flex-wrap w-full pl-10 justify-around pt-10 xl:pt-20">
               {Navs.map(({ text, to }, idx) => {
-                const isCartPortRoute = !(text !== 'Services' || !path.startsWith('/services'))
+                const isCartPortRoute = !(text !== 'Services')
                 if (!isCartPortRoute) {
                   return (
                     <li key={`${text}-${idx}`}>
                       <Link
                         to={to}
-                        className={`uppercase pl-4 md:pl-8 lg:pl-16 ${text !== 'Carports' && path.startsWith('/services') ? 'xl:pl-8' : 'xl:pl-0'} inline-block h-10 font-semibold text-lg`}
+                        className={`uppercase pl-4 md:pl-8 lg:pl-16 xl:pl-0 inline-block h-10 font-semibold text-lg hover:text-dark-light-2`}
                       >
                         {text}
                       </Link>
@@ -43,11 +43,13 @@ const Header = () => {
                   )
                 }
                 return (
-                  <li key={`${text}-${idx}`} style={{height: 212}}>
+                  <li key={`${text}-${idx}`} >
                     <Dropdown
                       menuOptions={ServiceNav}
                     >
-                      Services
+                      <Link to={to} className="text-right uppercase font-semibold text-lg inline-block hover:text-dark-light-2">
+                        Services
+                      </Link>
                     </Dropdown>
                   </li>
                 )

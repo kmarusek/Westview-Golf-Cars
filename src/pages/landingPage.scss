@@ -66,6 +66,11 @@ body {
     align-items: center;
     background-color: #e61c28;
     color: white;
+    @include respond(small) {
+      font-size: medium;
+      height: 2em;
+      font-size: 0.875rem;
+    }
 
     &-phone-img {
       height: 1em;
@@ -115,7 +120,7 @@ body {
   grid-template-columns: 4fr 8fr;
   @include respond(small) {
     grid-template-columns: 8fr 4fr;
-    margin-top: 5em;
+    margin-top: 1em;
   }
   @include respond(medsmall) {
     margin-top: 5em;

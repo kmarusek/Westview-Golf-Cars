@@ -16,6 +16,7 @@ module.exports = {
         'primary-light': 'var(--primary-light)',
         dark: 'var(--dark)',
         'dark-light': 'var(--dark-light)',
+        'dark-light-2': 'var(--dark-light-2)',
       },
       width: {
         '28': '7rem',
@@ -34,6 +35,8 @@ module.exports = {
       '5': '5px',
     },
   },
-  variants: {},
+  variants: {
+    textOpacity: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
 }

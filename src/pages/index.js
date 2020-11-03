@@ -168,7 +168,7 @@ const LandingPage = () => {
       <div className="desc">GOLF CARS</div>
       <div className="container">
         <div className="p-4 lg:p-6">
-          <p className="text-lg">
+          <p className="md:text-lg">
             It’s more than the easiest way to get around the course. A great
             golf car gives you style and confidence from the tee box to the
             green. We’re not sure how many strokes the perfect golf car can

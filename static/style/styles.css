@@ -5,6 +5,7 @@
   --primary-light: var(--red-light);
   --dark: #22212d;
   --dark-light: #262533;
+  --dark-light-2: #4b4747;
 }
 
 /*! purgecss start ignore */
