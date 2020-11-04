@@ -82,12 +82,11 @@ const Dropdown = (props) => {
         role="button"
         onClick={openDropdown}
         className={`inline-block -mt-2 mx-2 text-lg transition duration-300 ${
-          active ? 'transform rotate-180' : ''
+          active ? 'transform rotate-180 text-dark-light-2' : ''
         }`}
       />
-      {(active || showOptions) && (
         <div
-          className="text-right bg-gray-200 w-48 shadow-xl"
+          className={`text-right bg-gray-200 w-48 shadow-xl transition-all duration-300 ${(active || showOptions) ? 'visible opacity-1' : 'invisible opacity-0'}`}
           ref={popperRef}
           style={{
             ...styles.popper,
@@ -99,7 +98,6 @@ const Dropdown = (props) => {
         >
           {renderOptions}
         </div>
-      )}
     </DropdownWrapper>
   )
 }
