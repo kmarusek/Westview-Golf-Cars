@@ -163,7 +163,7 @@ const LandingPage = () => {
                         )
                       }
                       return (
-                        <li key={`${text}-${idx}`}>
+                        <li key={`${text}-${idx}`} className='invisible md:visible absolute md:relative h-12'>
                           <Dropdown menuOptions={ServiceNav}>
                             <Link
                               to={to}

@@ -11,7 +11,7 @@ const DropdownWrapper = styled.div`
 `
 
 const Dropdown = (props) => {
-  const { children, menuOptions } = props
+  const { children, menuOptions, className } = props
   const [ showOptions, setShowOptions ] = useState(false)
   const wrapperRef = useRef()
   const popperRef = useRef(null)
@@ -75,13 +75,12 @@ const Dropdown = (props) => {
   return (
     <DropdownWrapper
       ref={wrapperRef}
-      role="button"
-      className={`relative h-12`}
-      onClick={openDropdown}
       {...bind}
     >
       {children}
       <TiArrowSortedUp
+        role="button"
+        onClick={openDropdown}
         className={`inline-block -mt-2 mx-2 text-lg transition duration-300 ${
           active ? 'transform rotate-180' : ''
         }`}

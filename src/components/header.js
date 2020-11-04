@@ -43,7 +43,7 @@ const Header = () => {
                   )
                 }
                 return (
-                  <li key={`${text}-${idx}`} >
+                  <li key={`${text}-${idx}`} className='relative h-12' >
                     <Dropdown
                       menuOptions={ServiceNav}
                     >
