@@ -21,7 +21,7 @@ const CarPortsPage = () => {
 
   return (
     <Layout
-      title="Westview Golf Cars | Carports"
+      title="Carports"
       description="As an authorized dealer of American Steel Carports, we build storage, garage spaces, vehicle and golf car storage, and other structures."
     >
       <HeaderMobile />
@@ -35,30 +35,34 @@ const CarPortsPage = () => {
       >
         Car Ports
       </h2>
-      <h1 className='text-center text-2xl mt-2 font-semibold'>Store vehicles, machinery, wood, and more.</h1>
+      <h1 className="text-center text-2xl mt-2 font-semibold">
+        Store vehicles, machinery, wood, and more.
+      </h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4 lg:pb-8">
-        <p className='mb-4'>
+        <p className="mb-4">
           Westview Golf Cars is proud to be an authorized dealer of American
-          Steel Carports. We can help design and build the perfect storage
-          solution for your machinery, golf cars, and project spaces.
+          Steel Carports.
         </p>
-        <p className='mb-4'>
+        <p className="mb-4">
           American Steel Carports provides long-lasting structural solutions,
           including carports, garages, workshops, and barns. It’s the perfect
-          place to put your equipment, get started on a new kind of project, or
-          store your golf car. American Steel Carport structures have a lot of
-          flexibility, so if you’re looking for something specific, we can work
-          closely with you to get it done perfectly.
+          place to put your equipment, get started on a new project, or store
+          your golf car. American Steel Carport structures have a lot of
+          flexibility, so if you’re looking for something specific, you can
+          likely find it here.
         </p>
-        <p className='mb-4'>
-          If you’re not sure what you’re looking for, stop by our property.
-          We’ve got demos put up and we can walk you through your options.
+        <p className="mb-4">
+          If you’re not sure what you’re looking for, stop by our property. We
+          have demos on site and can walk you through your options.
         </p>
-        <p className='mb-6'>
-          Starting at $1220. For more pricing information, please get in touch.
+        <p className="mb-6">
+          Starting at $1190. Contact us for more pricing information.
         </p>
-        <div className='max-w-xl mx-auto'>
-          <Img fluid={data.authorized_dealer.childImageSharp.fluid} alt='car-ports' />
+        <div className="max-w-xl mx-auto">
+          <Img
+            fluid={data.authorized_dealer.childImageSharp.fluid}
+            alt="car-ports"
+          />
         </div>
       </div>
       <Footer className="bottom-0" />

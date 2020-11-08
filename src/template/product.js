@@ -58,7 +58,7 @@ function Product({ pageContext }) {
                 <div className="feedback__block">
                   <div className="feedback__block-phone-img"></div>
                   <div className="feedback__block-phone-number">
-                    269 - 555 - 5555
+                    269 - 720 - 7168
                   </div>
                 </div>
               </a>

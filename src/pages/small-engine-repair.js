@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 const SmallEngineRepairPage = () => {
   return (
     <Layout
-      title="Golf Cars Services | Small Engine Repair"
+      title="Small Engine Repair"
       description="Golf car engine repair lets your favorite old car ride again. We also handle engine repair for vehicles like trucks, motorcycles, service vehicles, and ATVs."
     >
       <HeaderMobile />

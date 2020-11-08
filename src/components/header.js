@@ -12,11 +12,11 @@ const Header = () => {
       <div>
         <div className="px-4">
           <div className="feedback">
-            <a href='tel:2695555555'>
+            <a href='tel:2697207168'>
               <div className="feedback__block">
                 <div className="feedback__block-phone-img"></div>
                 <div className="feedback__block-phone-number">
-                  269 - 555 - 5555
+                  269 - 720 - 7168
                 </div>
               </div>
             </a>

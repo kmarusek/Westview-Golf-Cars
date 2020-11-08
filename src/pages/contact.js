@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 const ContactPage = () => {
   return (
     <Layout
-      title="Westview Golf Cars | Contact"
+      title="Contact"
       description="Questions about the golf cars, rentals, and repairs we offer? Get in touch and we’ll talk about how we can help."
     >
       <HeaderMobile />
@@ -23,11 +23,15 @@ const ContactPage = () => {
       </h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12">
         <p className="my-4">
-        We’re here to help. If you have any questions about the services we offer, please get in touch. Fill out the form below and we will get back to you as soon as we can. 
+          We’re here to help. If you have any questions about the services we
+          offer, please get in touch. Fill out the form below and we will get
+          back to you as soon as we can.
         </p>
-        <h2 className='font-semibold text-2xl text-center mt-6'>What can we do for you?</h2>
+        <h2 className="font-semibold text-2xl text-center mt-6">
+          What can we do for you?
+        </h2>
       </div>
-      <Footer className='absolute bottom-0' />
+      <Footer className="absolute bottom-0" />
     </Layout>
   )
 }

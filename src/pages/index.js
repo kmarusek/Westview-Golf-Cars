@@ -19,7 +19,7 @@ const HeroContainer = styled.div`
 `
 
 const CardImg = styled.div`
-  ${tw`text-white absolute top-0 h-full flex flex-col text-center justify-center items-center transition duration-300`}
+  ${tw`text-white absolute top-0 w-full h-full flex flex-col text-center justify-center items-center transition duration-300`}
   &:hover {
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -124,7 +124,7 @@ const LandingPage = () => {
 
   return (
     <Layout
-      title="Westview Golf Cars"
+      title="Home Page"
       description="It matters how you drive. Westview Golf Cars specializes in golf car repair, custom golf car builds, and steel golf car carports."
     >
       <div className="header-block">
@@ -137,11 +137,11 @@ const LandingPage = () => {
           <HeroContainer>
             <div className="px-4">
               <div className="feedback">
-                <a href="tel:2695555555">
+                <a href='tel:2697207168'>
                   <div className="feedback__block">
                     <div className="feedback__block-phone-img"></div>
                     <div className="feedback__block-phone-number">
-                      269 - 555 - 5555
+                      269 - 720 - 7168
                     </div>
                   </div>
                 </a>
@@ -184,7 +184,7 @@ const LandingPage = () => {
       </div>
       <div className="desc">GOLF CARS</div>
       <div className="container">
-        <div className="p-4 lg:p-6">
+        {/* <div className="p-4 lg:p-6">
           <p className="md:text-lg">
             It’s more than the easiest way to get around the course. A great
             golf car gives you style and confidence from the tee box to the
@@ -193,7 +193,7 @@ const LandingPage = () => {
             the right set of clubs. Drive more confidently, swing more
             confidently.
           </p>
-        </div>
+        </div> */}
         <div className="row-cards1 p-4 lg:p-6">
           <div className="relative">
             <Img
@@ -226,7 +226,8 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>Want something specific? We’ll design a car you love.</p>
+              <p>Want something specific?</p>
+              <p>We’ll design your perfect car.</p>
               <Button className="margin-top1">Custom Golf Cars</Button>
             </CardImg>
           </div>
@@ -246,10 +247,10 @@ const LandingPage = () => {
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
               <p className="text-4xl font-extrabold uppercase">
-                Small Engine Repair
+                Services
               </p>
               <Link to="/small-engine-repair">
-                <Button className="mt-4 py-4">Get it Fixed</Button>
+                <Button className="mt-4 py-4">Learn more</Button>
               </Link>
             </CardImg>
           </CardService>
@@ -262,7 +263,7 @@ const LandingPage = () => {
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
               <p className="text-4xl font-extrabold uppercase">
-                Carrot Installations
+                Carports
               </p>
               <Link to="/car-ports">
                 <Button className="mt-4">Store Your car</Button>
@@ -274,7 +275,7 @@ const LandingPage = () => {
 
         <div className="mt-4 px-4 h-16 lg:px-6">
           <div className="py-1 px-4 bg-primary flex justify-center items-center font-bold text-white">
-            CALL OR COME IN TODAY | 269 - 555 - 5555
+            CALL OR COME IN TODAY | 269 - 720 - 7168
           </div>
         </div>
 
