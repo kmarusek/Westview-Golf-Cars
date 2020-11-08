@@ -258,9 +258,11 @@ const LandingPage = () => {
         {/* divider */}
 
         <div className="mt-4 px-4 h-16 lg:px-6">
-          <div className="py-1 px-4 bg-primary flex justify-center items-center font-bold text-white">
-            CALL OR COME IN TODAY | 269 - 720 - 7168
-          </div>
+          <a href='tel:2697207168'>
+            <div className="py-1 px-4 bg-primary flex justify-center items-center font-bold text-white">
+              CALL OR COME IN TODAY | 269 - 720 - 7168
+            </div>
+          </a>
         </div>
 
         {/* divider */}

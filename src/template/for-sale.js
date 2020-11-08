@@ -45,7 +45,7 @@ const Sales = ({ pageContext }) => {
             </button>
           </div>
         </div>
-        <div className="container px-4 flex flex-wrap justify-center md:justify-between">
+        <div className="container p-4 flex flex-wrap justify-center md:justify-between">
           {products.map((product) => (
             <div key={product.productId} className="mb-6 lg:mb-12">
               <div className="max-w-xs">
@@ -54,7 +54,7 @@ const Sales = ({ pageContext }) => {
                   <Img
                     fluid={product.image.fluid}
                     alt="product-image"
-                    style={{ width: screen === 'sm' ? '16rem' : '20rem' }}
+                    style={{ width: screen === 'sm' ? '16rem' : '18rem' }}
                   />
                 </Link>
               </div>

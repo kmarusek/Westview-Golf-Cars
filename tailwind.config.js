@@ -11,6 +11,9 @@ module.exports = {
       xl: '1280px'
     },
     extend: {
+      margin: {
+        '3': '0.75rem'
+      },
       colors: {
         primary: 'var(--primary)',
         'primary-light': 'var(--primary-light)',
