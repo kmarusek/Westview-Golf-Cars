@@ -28,32 +28,16 @@ const Header = () => {
               <HeroLogo />
             </div>
             <ul className="hidden md:flex md:flex-wrap w-full pl-10 justify-around pt-10 xl:pt-20">
-              {Navs.map(({ text, to }, idx) => {
-                const isCartPortRoute = !(text !== 'Services')
-                if (!isCartPortRoute) {
-                  return (
-                    <li key={`${text}-${idx}`}>
-                      <Link
-                        to={to}
-                        className={`uppercase pl-4 md:pl-8 lg:pl-16 xl:pl-0 inline-block h-10 font-semibold text-lg hover:text-dark-light-2`}
-                      >
-                        {text}
-                      </Link>
-                    </li>
-                  )
-                }
-                return (
-                  <li key={`${text}-${idx}`} className='relative h-12' >
-                    <Dropdown
-                      menuOptions={ServiceNav}
-                    >
-                      <Link to={to} className="text-right uppercase font-semibold text-lg inline-block hover:text-dark-light-2">
-                        Services
-                      </Link>
-                    </Dropdown>
-                  </li>
-                )
-              })}
+              {Navs.map(({ text, to }, idx) => (
+                <li key={`${text}-${idx}`}>
+                  <Link
+                    to={to}
+                    className={`uppercase pl-4 md:pl-8 lg:pl-16 xl:pl-0 inline-block h-10 font-semibold text-lg hover:text-dark-light-2`}
+                  >
+                    {text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

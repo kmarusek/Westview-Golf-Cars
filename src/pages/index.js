@@ -152,29 +152,13 @@ const LandingPage = () => {
                 <div className="menu__logo"></div>
                 <div className="menu__links">
                   <ul className="hidden md:block">
-                    {Navs.map(({ text, to }, idx) => {
-                      if (text !== 'Services') {
-                        return (
-                          <li key={`${text}-${idx}`}>
-                            <Link to={to} className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index">
-                              {text}
-                            </Link>
-                          </li>
-                        )
-                      }
-                      return (
-                        <li key={`${text}-${idx}`} className='invisible md:visible absolute md:relative h-12'>
-                          <Dropdown menuOptions={ServiceNav}>
-                            <Link
-                              to={to}
-                              className="text-right uppercase font-semibold text-lg inline-block hover:text-dark-light-2"
-                            >
-                              Services
-                            </Link>
-                          </Dropdown>
-                        </li>
-                      )
-                    })}
+                    {Navs.map(({ text, to }, idx) => (
+                      <li key={`${text}-${idx}`}>
+                        <Link to={to} className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index">
+                          {text}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
