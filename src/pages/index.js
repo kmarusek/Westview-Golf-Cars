@@ -137,7 +137,7 @@ const LandingPage = () => {
           <HeroContainer>
             <div className="px-4">
               <div className="feedback">
-                <a href='tel:2697207168'>
+                <a href="tel:2697207168">
                   <div className="feedback__block">
                     <div className="feedback__block-phone-img"></div>
                     <div className="feedback__block-phone-number">
@@ -154,7 +154,10 @@ const LandingPage = () => {
                   <ul className="hidden md:block">
                     {Navs.map(({ text, to }, idx) => (
                       <li key={`${text}-${idx}`}>
-                        <Link to={to} className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index">
+                        <Link
+                          to={to}
+                          className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index"
+                        >
                           {text}
                         </Link>
                       </li>
@@ -230,9 +233,7 @@ const LandingPage = () => {
               style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
-              <p className="text-4xl font-extrabold uppercase">
-                Services
-              </p>
+              <p className="text-4xl font-extrabold uppercase">Services</p>
               <Link to="/small-engine-repair">
                 <Button className="mt-4 py-4">Learn more</Button>
               </Link>
@@ -246,9 +247,7 @@ const LandingPage = () => {
               style={{ maxHeight: mediumScreen ? 390 : 260 }}
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
-              <p className="text-4xl font-extrabold uppercase">
-                Carports
-              </p>
+              <p className="text-4xl font-extrabold uppercase">Carports</p>
               <Link to="/car-ports">
                 <Button className="mt-4">Store Your car</Button>
               </Link>
@@ -258,7 +257,7 @@ const LandingPage = () => {
         {/* divider */}
 
         <div className="mt-4 px-4 h-16 lg:px-6">
-          <a href='tel:2697207168'>
+          <a href="tel:2697207168">
             <div className="py-1 px-4 bg-primary flex justify-center items-center font-bold text-white">
               CALL OR COME IN TODAY | 269 - 720 - 7168
             </div>
@@ -368,10 +367,14 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="md:w-1/3">
-              <Img
-                fluid={data.imageMap.childImageSharp.fluid}
-                className="w-full"
-                alt="hero-image"
+              <iframe
+                width='100%'
+                height='100%'
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11821.095939266785!2d-85.9686415!3d42.2085885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe826a8d98a0f682a!2sWestview%20Golf%20Cars%20%26%20More%2C%20LLC.!5e0!3m2!1sen!2sus!4v1604933876022!5m2!1sen!2sus"
+                frameborder="0"
+                allowFullScreen=""
+                aria-hidden="false"
+                tabIndex="0"
               />
             </div>
             <div className="md:w-1/3 mt-4 md:mt-0">
