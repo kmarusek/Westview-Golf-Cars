@@ -72,7 +72,7 @@ const AboutPage = () => {
           aptent taciti sociosqu ad litora torquent per conubia nostra, per
           inceptos himenaeos.
         </p>
-        <div className='mx-8 md:mx-12 xl:mx-24 mt-20'>
+        <div className='max-w-md xl:max-w-xl mx-auto mt-20'>
           <Img
             fluid={data.logo.childImageSharp.fluid}
             className="w-full"

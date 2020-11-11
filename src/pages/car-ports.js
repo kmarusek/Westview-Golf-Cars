@@ -65,7 +65,7 @@ const CarPortsPage = () => {
           />
         </div>
       </div>
-      <Footer className="bottom-0" />
+      <Footer className="xl:absolute bottom-0" />
     </Layout>
   )
 }

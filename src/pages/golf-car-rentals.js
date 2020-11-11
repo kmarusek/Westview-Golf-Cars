@@ -21,7 +21,7 @@ const GolfCarsRental = () => {
 
   return (
     <Layout
-      title="Westview Golf Cars | Rentals"
+      title="Golf Car Rentals"
       description="Need an awesome car for the day? Westview Golf Cars offers golf car rentals with gas and electric engines, lights, and soundbars."
     >
       <HeaderMobile />
@@ -46,19 +46,13 @@ const GolfCarsRental = () => {
           weddings, photos, and a list of things you wouldn’t believe. If you’ve
           got a strange request, get in touch, we’ve heard it before.
         </p>
-        <h2 className="text-center text-2xl mt-2 font-semibold">Play a round of golf</h2>
-        <p className="mb-4">
-          Rent a single car or a set of cars for the group. It’s a way better
-          way to get around the course—and you get great cars in perfect
-          condition.
-        </p>
         <h2 className="text-center text-2xl mt-2 font-semibold">Events</h2>
         <p className="mb-4">
           Need to get cars for an event? Maybe you’re going golfing with your
           company, or you just want to get around your wedding with a bit more
           flare than the average bride and groom. Let’s talk.
         </p>
-        <div className="mx-8 md:mx-12 xl:mx-24 mt-20">
+        <div className="max-w-md xl:max-w-xl mx-auto mt-20">
           <Img
             fluid={data.logo.childImageSharp.fluid}
             className="w-full"
@@ -66,7 +60,7 @@ const GolfCarsRental = () => {
           />
         </div>
       </div>
-      <Footer className="bottom-0" />
+      <Footer className="xl:absolute bottom-0" />
     </Layout>
   )
 }

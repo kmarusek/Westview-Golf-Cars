@@ -234,7 +234,7 @@ const LandingPage = () => {
             />
             <CardImg className="px-10 md:px-8 lg:px-12 w-full">
               <p className="text-4xl font-extrabold uppercase">Services</p>
-              <Link to="/small-engine-repair">
+              <Link to="/services">
                 <Button className="mt-4 py-4">Learn more</Button>
               </Link>
             </CardImg>
@@ -371,7 +371,7 @@ const LandingPage = () => {
                 width='100%'
                 height='100%'
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11821.095939266785!2d-85.9686415!3d42.2085885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe826a8d98a0f682a!2sWestview%20Golf%20Cars%20%26%20More%2C%20LLC.!5e0!3m2!1sen!2sus!4v1604933876022!5m2!1sen!2sus"
-                frameborder="0"
+                frameBorder="0"
                 allowFullScreen=""
                 aria-hidden="false"
                 tabIndex="0"
