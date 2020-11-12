@@ -126,8 +126,9 @@ body {
     margin-top: 5em;
   }
   @include respond(medium) {
-    // grid-template-columns: 5fr 6fr;
-    grid-template-columns: none;
+    grid-template-columns: 3fr 5fr;
+    // grid-template-columns: none;
+    height: 8em;
   }
 
   @include respond(large) {
@@ -135,6 +136,7 @@ body {
   }
 
   &__logo {
+    // margin-left: 4rem;
     max-width: 350px;
     background-image: url('../../static/images/logo.png');
     background-position: center;
@@ -143,6 +145,7 @@ body {
     @include respond(small) {
       width: 12em;
       background-position: top;
+      display: none;
     }
     @include respond(medsmall) {
       width: 12em;

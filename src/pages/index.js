@@ -49,7 +49,7 @@ const OperationBoxV2 = styled.div`
 const LandingPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "landingBackground.jpg" }) {
+      background: file(relativePath: { eq: "WESTVIEW-GOLF-CARS-bg.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -156,7 +156,7 @@ const LandingPage = () => {
                       <li key={`${text}-${idx}`}>
                         <Link
                           to={to}
-                          className="hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index"
+                          className="text-white hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index"
                         >
                           {text}
                         </Link>
