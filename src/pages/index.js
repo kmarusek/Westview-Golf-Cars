@@ -77,7 +77,7 @@ const LandingPage = () => {
           }
         }
       }
-      serviceLeft: file(relativePath: { eq: "image7.jpg" }) {
+      serviceLeft: file(relativePath: { eq: "IMG_5826.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid

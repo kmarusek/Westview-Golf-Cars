@@ -47,6 +47,20 @@ const ServicesPage = (props) => {
           }
         }
       }
+      sub6: file(relativePath: { eq: "IMG_5825.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sub7: file(relativePath: { eq: "IMG_5826.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -62,6 +76,8 @@ const ServicesPage = (props) => {
   const mainSrc = Object.values(data).map(
     (val) => val.childImageSharp.fluid.src
   )
+  // console.log('ServicesPage -> mainSrc', mainSrc.length)
+  // console.log('ServicesPage -> photoIndex', photoIndex)
 
   return (
     <Layout
@@ -225,7 +241,7 @@ const ServicesPage = (props) => {
             tabIndex={idx}
             alt={`service-img-${idx}`}
             key={`service-img-${idx}`}
-            onClick={() => onClickImg(3000 + idx)}
+            onClick={() => onClickImg(mainSrc.length * 100 + idx)}
           >
             <Img fluid={val.childImageSharp.fluid} alt="service-img" />
           </div>

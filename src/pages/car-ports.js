@@ -33,7 +33,7 @@ const CarPortsPage = () => {
         className="bg-black text-white uppercase text-4xl text-center font-semibold mt-8"
         style={{ letterSpacing: '0.15em' }}
       >
-        Car Ports
+        Carports
       </h2>
       <h1 className="text-center text-2xl mt-2 font-semibold">
         Store vehicles, machinery, wood, and more.
