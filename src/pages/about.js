@@ -47,22 +47,7 @@ const AboutPage = () => {
        repairs and custom builds of all major makes/models of golf cars and utility vehicles as well as internet access to its services and available cars. Continuing to provide 
        the same services and standards, our business focuses on accessibility and customer and community engagement. 
         </p>
-        <p className="mb-4">
-          Suspendisse potenti. Curabitur orci risus, ultrices vel eleifend eget,
-          mollis sed magna. Fusce efficitur neque ut mollis viverra.
-          Pellentesque finibus pellentesque lacinia. Praesent vel nibh eu felis
-          ultricies ultricies. In sit amet tellus mauris. In hac habitasse
-          platea dictumst. Aliquam cursus ipsum eu molestie venenatis. Nunc
-          tincidunt neque ligula, a viverra diam fermentum vitae. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Fusce neque enim, semper at est nec, fringilla tempor nibh. Sed
-          faucibus gravida diam, at accumsan erat elementum eget. Proin ac nisi
-          nulla. Vestibulum purus ligula, interdum in odio eu, vulputate
-          consequat purus. Duis volutpat lacus nec volutpat euismod. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos.
-        </p>
-        <div className='max-w-md xl:max-w-xl mx-auto mt-20'>
+    <div className='max-w-md xl:max-w-xl mx-auto mt-20'>
           <Img
             fluid={data.logo.childImageSharp.fluid}
             className="w-full"
