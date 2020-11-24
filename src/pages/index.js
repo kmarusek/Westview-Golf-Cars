@@ -189,9 +189,6 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>
-                Perfect for shorter range driving. Easier to maintain than gas.
-              </p>
               <Button className="margin-top1">Electric Golf Cars</Button>
             </CardImg>
           </div>
@@ -202,7 +199,6 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>Ideal if you need a longer range and more power.</p>
               <Button className="margin-top1">Gas Golf Cars</Button>
             </CardImg>
           </div>
@@ -213,8 +209,6 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <p>Want something specific?</p>
-              <p>We’ll design your perfect car.</p>
               <Button className="margin-top1">Custom Golf Cars</Button>
             </CardImg>
           </div>
@@ -274,7 +268,7 @@ const LandingPage = () => {
           </Card>
           <Card style={{ height: '100%', width: '100%' }} src="imageMap.png" />
           <div className="hours-opearation">
-            <p className="hours-opearation__header">HOURS OF OPERATING</p>
+            <p className="hours-opearation__header">HOURS OF OPERATION</p>
             <div className="hours-opearation__container">
               <div>
                 <p>MON</p>
@@ -315,28 +309,28 @@ const LandingPage = () => {
               </div>
               <OperationBox className="">
                 <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
-                  HOURS OF OPERATING
+                  HOURS OF OPERATION
                 </h4>
                 <div className="">
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">MON</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">TUE</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">WED</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">THUR</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">FRI</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">SAT</p>
@@ -380,28 +374,28 @@ const LandingPage = () => {
             <div className="md:w-1/3 mt-4 md:mt-0">
               <OperationBoxV2 className="">
                 <h4 className="text-lg xl:text-xl font-extrabold tracking-wide px-2 mb-2">
-                  HOURS OF OPERATING
+                  HOURS OF OPERATION
                 </h4>
                 <div className="">
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">MON</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">TUE</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">WED</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">THUR</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">FRI</p>
-                    <p className="w-2/3">9:00 AM - 5:00 PM</p>
+                    <p className="w-2/3">8:00 AM - 4:00 PM</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">SAT</p>
