@@ -37,25 +37,15 @@ const AboutPage = () => {
       <h1 className="text-center text-2xl mt-2 font-semibold">About</h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4 lg:pb-8">
         <p className="mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-          porttitor, ipsum pulvinar pretium vestibulum, nibh ipsum commodo
-          justo, vel tempus ante tortor lobortis neque. Nunc at nisl imperdiet
-          nunc tempus efficitur at vitae ante. Praesent suscipit lorem mi, non
-          sagittis ex faucibus quis. Nulla eu dui vitae augue pulvinar convallis
-          suscipit sit amet nisl. Suspendisse vitae felis ac leo vulputate
-          tempus vel eget felis. Aliquam erat volutpat. In fermentum et quam
-          eget maximus. In fringilla felis justo, et volutpat est eleifend ut.
-          Donec vel commodo libero.
+         Originally founded in 2001, Westview Golf Cars Inc. successfully operated out of a pole barn on beautiful, family-run Westview Fruit Farm in Mattawan, Michigan. 
+         After having served its customers for over 16 years, in 2017, it transitioned to its current owner, Bob Twardowski, and Westview Golf Cars & More, LLC was born. 
+         Having 8 years experience running the shop, mobile service repairs and golf course lease management, Bob was able to seamlessly convert the business to its new 
+         home in West Paw Paw with a customer-focused business approach. 
         </p>
         <p className="mb-4">
-          Praesent accumsan ipsum in tortor aliquet imperdiet. Sed leo odio,
-          condimentum eget sapien eu, egestas mollis nisl. Donec vel mauris a
-          dolor viverra posuere. Duis eu justo augue. Nam quis sem sit amet
-          magna pretium sodales. Suspendisse in lorem id est venenatis sodales.
-          Proin ut faucibus mauris. Nulla facilisi. Ut urna nisi, eleifend eu mi
-          non, semper scelerisque eros. Morbi vehicula et enim vel dictum.
-          Quisque vel est elit. Aliquam placerat quam id erat maximus, vel
-          vulputate massa placerat. Etiam consectetur ornare laoreet.
+       Initially focusing on leasing, wholesale and servicing and repairs of EZ-GO© golf cars, WGC has since expanded to offering customers a convenient location, a showroom, 
+       repairs and custom builds of all major makes/models of golf cars and utility vehicles as well as internet access to its services and available cars. Continuing to provide 
+       the same services and standards, our business focuses on accessibility and customer and community engagement. 
         </p>
         <p className="mb-4">
           Suspendisse potenti. Curabitur orci risus, ultrices vel eleifend eget,
