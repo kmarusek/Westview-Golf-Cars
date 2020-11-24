@@ -286,11 +286,11 @@ const LandingPage = () => {
                 <p>SAN</p>
               </div>
               <div>
-                <p>9:00 AM - 5:00 PM</p>
-                <p>9:00 AM - 5:00 PM</p>
-                <p>9:00 AM - 5:00 PM</p>
-                <p>9:00 AM - 5:00 PM</p>
-                <p>9:00 AM - 5:00 PM</p>
+                <p>8:00 AM - 4:00 PM</p>
+                <p>8:00 AM - 4:00 PM</p>
+                <p>8:00 AM - 4:00 PM</p>
+                <p>8:00 AM - 4:00 PM</p>
+                <p>8:00 AM - 4:00 PM</p>
                 <p>CLOSED</p>
                 <p>CLOSED</p>
               </div>
