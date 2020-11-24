@@ -97,24 +97,8 @@ const ServicesPage = (props) => {
       </h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12">
         <p className="my-4">
-          Look, we get it. If you could drive the golf car or vehicle up to our
-          door, then it wouldn’t need repairs in the first place. That’s why
-          we’ve spent years investing in our mobile services. There’s a lot of
-          simple golf car repairs and maintenance that we can do onsite in a
-          single visit.
-        </p>
-        <p className="my-4">
-          You may not have the gear to haul your golf car, but we certainly do.
-          If you’ve got an old clunker that you want cleaned and rebuilt, we can
-          put it on a trailer and bring it back only when it’s ready to take the
-          course once again.
-        </p>
-        <p className="my-4">
-          We do all kinds of engine, mechanical, electrical, and welding
-          services on golf cars and other vehicles. If you aren’t sure if it’s a
-          job we can tackle, give us a call. We’ll be able to tell you quickly
-          whether or not we can do it - and if we can’t do it, we’re happy to
-          pass out recommendations for someone who can.
+        We offer all kinds of engine, mechanical, electrical, and welding services for golf cars and other utility vehicles. 
+    If you aren’t sure if it’s a job we can tackle, give us a call. 
         </p>
         <h2 className="uppercase font-bold text-lg text-center tracking-widest pt-4">
           Our services include the following
@@ -145,91 +129,37 @@ const ServicesPage = (props) => {
       <div className="px-4 max-w-5xl mx-auto mb-6">
         <CardCollapsible
           sectionTitle="Small Engine Repair"
-          outerClassName="mb-4"
-        >
+          outerClassName="mb-4">
           <p className="mb-4">
-            No matter how much rust, dust, and grime—we can get it humming
-            again. From old rusty engines with a mouse nest inside, to something
-            shiny that just needs a new spark plug, we’ve seen it all. Our
-            services range from minor engine repairs to complete engine rebuilds
-            on old rusty motors.
+          No matter how much rust, dust, and grime—we can get it humming again. 
+          From old rusty engines with a mouse nest inside to something newer that just needs a tuneup. 
+          Our services range from minor engine repairs to complete engine rebuilds on old rusty motors.
           </p>
           <p className="mb-4">
-            We specialize in golf cars, but a golf car engine is just a small
-            engine that gets you around the course. We also handle small engine
-            repair for various utility vehicles. If you have any questions about
-            the kind of vehicles and engines that we can repair, give us a call!
+          We specialize in golf cars,  but we also handle small engine repair for various utility vehicles. 
+          If you have any questions about the kind of vehicles and engines that we can repair, give us a call!
           </p>
           <p className="mb-4">
-            If your golf car or vehicle hasn’t moved in years, we can pick it
-            up, repair it, and drop it back off. We know that when you need
-            engine repair, it’s because your vehicle can’t move! We have all the
-            gear to repair things on site or get it into the shop.
+          We offer pick up and delivery services for non-running vehicles or repairs that cannot be made onsite. 
           </p>
         </CardCollapsible>
         <CardCollapsible sectionTitle="Welding Service" outerClassName="mb-4">
           <p className="mb-4">
-            We’re in the business of putting metal back together again. Whether
-            it’s a project we’re starting from scratch or some general repairs,
-            we love a finely-welded line like it’s artwork.
-          </p>
-          <p className="mb-4">
-            We build custom golf cars from scratch, piece by piece. Sometimes
-            we’re repurposing an old frame and sometimes we’re starting fresh.
-            But our vehicle welding services extend beyond just an axle here and
-            there. We work on trailer couplers, recovery winches, new frames,
-            and major repairs.
-          </p>
-          <p className="mb-4">
-            If you broke something specific, we can get out to your place and
-            put you back together in an afternoon. For more extensive jobs,
-            we’ve got our full service shop and all the horsepower we need to
-            get your machinery there and back.
-          </p>
+           General weld repair on stainless, aluminum and mild steel. 
+           Please contact us to see if we can help you with your welding needs.
+          </p> 
         </CardCollapsible>
         <CardCollapsible sectionTitle="Mobile Service" outerClassName="mb-4">
           <p className="mb-4">
-            Look, we get it. If you could drive the golf car or vehicle up to
-            our door, then it wouldn’t need repairs in the first place. That’s
-            why we’ve spent years investing in our mobile services. There’s a
-            lot of simple golf car repairs and maintenance that we can do onsite
-            in a single visit.
-          </p>
-          <p className="mb-4">
-            You may not have the gear to haul your golf car, but we certainly
-            do. If you’ve got an old clunker that you want cleaned and rebuilt,
-            we can put it on a trailer and bring it back only when it’s ready to
-            take the course once again.
-          </p>
-          <p className="mb-4">
-            We do all kinds of engine, mechanical, electrical, and welding
-            services on golf cars and other vehicles. If you aren’t sure if it’s
-            a job we can tackle, give us a call. We’ll be able to tell you
-            quickly whether or not we can do it—and if we can’t do it, we’re
-            happy to pass out recommendations for someone who can.
+         We’ve spent years investing in our mobile services, there are many repairs that can be done onsite in a single visit. 
+         Our mobile services offer customers a convenient alternative to having to find a way to bring their vehicle in for repair. 
+         Our goal is to make the repair process as seamless to our customers as possible. 
           </p>
         </CardCollapsible>
         <CardCollapsible sectionTitle="Golf Car Rentals" outerClassName="mb-4">
           <p className="mb-4">
-            We love pairing custom carts with ecstatic owners, and we love
-            helping people get their old cart back up and running again. But we
-            also keep a selection of our favorites around to rent them out for
-            events, golf, weddings, photos, and a list of things you wouldn’t
-            believe. If you’ve got a strange request, get in touch, we’ve heard
-            it before.
-          </p>
-          <h2 className="text-center text-2xl mt-2 font-semibold">
-            Play a round of golf
-          </h2>
-          <p className="mb-4">
-            Rent a single car or a set of cars for the group. It’s a way better
-            way to get around the course—and you get great cars in perfect
-            condition.
-          </p>
-          <p className="mb-4">
-            Need to get cars for an event? Maybe you’re going golfing with your
-            company, or you just want to get around your wedding with a bit more
-            flare than the average bride and groom. Let’s talk.
+          We offer golf car rentals for weddings, race weekends, camping, family reunions and other special events. 
+          Rental options range from daily to weekly, call for pricing and delivery availability. 
           </p>
         </CardCollapsible>
       </div>
