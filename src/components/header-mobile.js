@@ -8,7 +8,7 @@ const HeaderMobile = () => {
   
   return (
     <>
-      <div className='md:hidden'>
+      <div className='lg:hidden'>
         <Menu
           styles={menuConfig}
           customBurgerIcon={

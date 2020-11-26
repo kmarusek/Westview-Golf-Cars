@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import FacebookIcon from '../../static/svg/facebook-icon.svg'
 
 const Footer = ({className = ''}) => {
   return (
-    <div className={`mt-6 bg-black py-2 text-sm w-full ${className}`}>
+    <div className={`mt-6 bg-black py-2 text-sm w-full ${className}`} id='footer'>
       <div className="container w-full md:flex md:justify-between">
-        <ul className="max-w-2xl flex justify-center md:justify-start pb-2 md:pb-0 flex-wrap">
+        <ul className="max-w-3xl flex justify-center items-center md:justify-start pb-2 md:pb-0 flex-wrap">
           <li className="px-3 md:px-4 font-semibold">
             <Link to="/" className="text-white">
               HOME
@@ -40,6 +41,12 @@ const Footer = ({className = ''}) => {
             <Link to="/contact" className="text-white">
               CONTACT
             </Link>
+          </li>
+          <li className="px-3 md:px-4 font-semibold">
+            <a href="https://www.facebook.com/WestviewGolfCars/" className="inline-block">
+              <FacebookIcon className='bg-white w-10 h-10' />
+              {/* <img src='../../images/facebook-icon.png' alt='facebook-icon' className='inline-block w-10 h-10' /> */}
+            </a>
           </li>
         </ul>
         <p className="text-white font-semibold text-center md:text-right pr-4">

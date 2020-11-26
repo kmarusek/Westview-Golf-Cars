@@ -70,7 +70,7 @@ const Layout = ({ children, title, description, keywords }) => (
             <html lang="en" />
           </Helmet>
           <HeaderMobile />
-          <div className="h-screen relative">{children}</div>
+          <div className="h-screen relative" id='site-layout'>{children}</div>
         </>
       )
     }}
