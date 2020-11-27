@@ -14,11 +14,13 @@ const CollapsingTrigger = ({ title, className = 'bg-gray-400', }) => {
   )
 }
 
-export const CardCollapsible = ({ open = false, sectionTitle, children, outerClassName = '', className = '', triggerClassname = '',}) => {
+export const CardCollapsible = ({ open = false, sectionTitle, children, outerClassName = '', className = '', triggerClassname = '', onOpen, onClose}) => {
   return (
     <Collapsible
       trigger={<CollapsingTrigger title={sectionTitle} className={triggerClassname} />}
       open={open}
+      onOpen={onOpen}
+      onClose={onClose}
       className={`collapsing ${className}`}
       triggerClassName='collapsing__trigger'
       openedClassName='collapsing collapsing--is-open'

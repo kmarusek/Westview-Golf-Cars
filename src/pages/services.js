@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import HeaderMobile from "../components/header-mobile";
@@ -8,7 +8,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import Lightbox from "react-image-lightbox";
 import { CardCollapsible } from "../components/card-collapsible";
-import { useWindowSize } from '../utils/hook'
+import { useWindowSize } from "../utils/hook";
 
 const ServicesPage = (props) => {
   const data = useStaticQuery(graphql`
@@ -65,8 +65,11 @@ const ServicesPage = (props) => {
     }
   `);
 
-  const [stickBottom, setStickBottom] = useState(true)
+  const [stickBottom, setStickBottom] = useState(true);
   const [photoIndex, setPhotoIdx] = useState(-1);
+
+  const [opening, setOpening] = useState([]);
+  console.log('🚀 ~ file: services.js ~ line 75 ~ ServicesPage ~ opening', opening)
 
   const onClickImg = useCallback(
     (idx) => {
@@ -89,21 +92,38 @@ const ServicesPage = (props) => {
   // useEffect(() => {
   //   console.log(size)
   //   console.log('🚀 ~ file: services.js ~ line 99 ~ useEffect ~ height', height)
-    // const layoutHeight = el?.offsetHeight 
-    // console.log('🚀 ~ file: services.js ~ line 89 ~ useEffect ~ layoutHeight', layoutHeight)
-    // const totalHeight = footerEl?.getBoundingClientRect()?.height + footerEl?.getBoundingClientRect()?.top
-    // console.log('🚀 ~ file: services.js ~ line 91 ~ useEffect ~ totalHeight', totalHeight)
-    // const isSticky = totalHeight < layoutHeight
-    // console.log('🚀 ~ file: services.js ~ line 97 ~ useEffect ~ isSticky', isSticky)
-    // setStickBottom(isSticky)
-    // console.log('el: ',el?.offsetHeight)
-    // console.log('footer h: ',footerEl?.getBoundingClientRect())
+  // const layoutHeight = el?.offsetHeight
+  // console.log('🚀 ~ file: services.js ~ line 89 ~ useEffect ~ layoutHeight', layoutHeight)
+  // const totalHeight = footerEl?.getBoundingClientRect()?.height + footerEl?.getBoundingClientRect()?.top
+  // console.log('🚀 ~ file: services.js ~ line 91 ~ useEffect ~ totalHeight', totalHeight)
+  // const isSticky = totalHeight < layoutHeight
+  // console.log('🚀 ~ file: services.js ~ line 97 ~ useEffect ~ isSticky', isSticky)
+  // setStickBottom(isSticky)
+  // console.log('el: ',el?.offsetHeight)
+  // console.log('footer h: ',footerEl?.getBoundingClientRect())
   // }, [document,height, size, el, footerEl, setStickBottom])
+
+  const onOpenCollapsible = useCallback(
+    (num) => {
+      setOpening((v) => [...v, num]);
+    },
+    [setOpening]
+  );
+  const onCloseCollapsible = useCallback(
+    (num) => {
+      setOpening((v) => v.filter(val => val !== num));
+    },
+    [setOpening]
+  );
+
+  const absoluteFooter = useMemo(() => opening.length <= 0, [opening])
 
   return (
     <Layout
       title="Golf Cars Services | Remote Services"
       description="You don’t need to take your golf car to the shop. With remote services through Westview Golf Cars, we can repair your cars remotely or tow them ourselves"
+      layoutClassName='top-0'
+      // layoutStyle={{minHeight: '100vh'}}
     >
       <HeaderMobile />
       <div className="container px-4">
@@ -148,10 +168,12 @@ const ServicesPage = (props) => {
           </button>
         </Link>
       </div> */}
-      <div className="px-4 max-w-5xl mx-auto mb-6">
+      <div className="px-4 max-w-5xl mx-auto mb-48 md:mb-24">
         <CardCollapsible
           sectionTitle="Small Engine Repair"
           outerClassName="mb-4"
+          onOpen={() => onOpenCollapsible(1)}
+          onClose={() => onCloseCollapsible(1)}
         >
           <p className="mb-4">
             No matter how much rust, dust, and grime—we can get it humming
@@ -193,7 +215,12 @@ const ServicesPage = (props) => {
             </div>
           </div>
         </CardCollapsible>
-        <CardCollapsible sectionTitle="Welding Service" outerClassName="mb-4">
+        <CardCollapsible
+          sectionTitle="Welding Service"
+          outerClassName="mb-4"
+          onOpen={() => onOpenCollapsible(2)}
+          onClose={() => onCloseCollapsible(2)}
+        >
           <p className="mb-4">
             General weld repair on stainless, aluminum and mild steel. Please
             contact us to see if we can help you with your welding needs.
@@ -212,7 +239,12 @@ const ServicesPage = (props) => {
             </div>
           </div>
         </CardCollapsible>
-        <CardCollapsible sectionTitle="Mobile Service" outerClassName="mb-4">
+        <CardCollapsible
+          sectionTitle="Mobile Service"
+          outerClassName="mb-4"
+          onOpen={() => onOpenCollapsible(3)}
+          onClose={() => onCloseCollapsible(3)}
+        >
           <p className="mb-4">
             We’ve spent years investing in our mobile services, there are many
             repairs that can be done onsite in a single visit. Our mobile
@@ -245,7 +277,12 @@ const ServicesPage = (props) => {
             </div>
           </div>
         </CardCollapsible>
-        <CardCollapsible sectionTitle="Golf Car Rentals" outerClassName="mb-4">
+        <CardCollapsible
+          sectionTitle="Golf Car Rentals"
+          outerClassName="mb-4"
+          onOpen={() => onOpenCollapsible(4)}
+          onClose={() => onCloseCollapsible(4)}
+        >
           <p className="mb-4">
             We offer golf car rentals for weddings, race weekends, camping,
             family reunions and other special events. Rental options range from
@@ -309,7 +346,8 @@ const ServicesPage = (props) => {
           onMoveNextRequest={() => setPhotoIdx((v) => v + 1)}
         />
       )}
-      <Footer className={`${stickBottom ? 'absolute' : ''} left-0 bottom-0`} />
+      {/* <Footer className={`${absoluteFooter ? "absolute" : ""} left-0 bottom-0`} /> */}
+      <Footer className={`fixed left-0 bottom-0`} />
     </Layout>
   );
 };

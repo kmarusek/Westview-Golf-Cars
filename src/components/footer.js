@@ -43,7 +43,7 @@ const Footer = ({className = ''}) => {
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <a href="https://www.facebook.com/WestviewGolfCars/" className="inline-block">
+            <a href="https://www.facebook.com/WestviewGolfCars/" className="inline-block" target='_blank'>
               <FacebookIcon className='bg-white w-10 h-10' />
               {/* <img src='../../images/facebook-icon.png' alt='facebook-icon' className='inline-block w-10 h-10' /> */}
             </a>

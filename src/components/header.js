@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Navs, ServiceNav } from './navs'
 import HeroLogo from './hero-logo'
+import FindUsFacebookSvg from '../../static/svg/find-us-on-facebook.svg'
 import Dropdown from './dropdown'
 
 const Header = () => {
@@ -12,6 +13,9 @@ const Header = () => {
       <div>
         <div className="px-4">
           <div className="feedback">
+            <a href='https://www.facebook.com/WestviewGolfCars/' target='_blank' className='mr-2 md:mr-0 md:h-10 md:flex md:items-center lg:h-12'>
+              <FindUsFacebookSvg className='inline w-24 h-8 md:w-48 lg:w-64 lg:h-10' />
+            </a>
             <a href='tel:2697207168'>
               <div className="feedback__block">
                 <div className="feedback__block-phone-img"></div>

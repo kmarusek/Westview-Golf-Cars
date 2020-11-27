@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import HeaderMobile from './header-mobile'
 
-const Layout = ({ children, title, description, keywords }) => (
+const Layout = ({ children, title, description, keywords, layoutClassName, layoutStyle }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -70,7 +70,7 @@ const Layout = ({ children, title, description, keywords }) => (
             <html lang="en" />
           </Helmet>
           <HeaderMobile />
-          <div className="h-screen relative" id='site-layout'>{children}</div>
+          <div className={layoutClassName || "h-screen relative"} id='site-layout' style={layoutStyle || {}}>{children}</div>
         </>
       )
     }}
