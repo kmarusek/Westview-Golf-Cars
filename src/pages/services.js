@@ -168,7 +168,7 @@ const ServicesPage = (props) => {
           </button>
         </Link>
       </div> */}
-      <div className="px-4 max-w-5xl mx-auto mb-48 md:mb-24">
+      <div className="px-4 max-w-5xl mx-auto md:mb-32 xl:mb-24">
         <CardCollapsible
           sectionTitle="Small Engine Repair"
           outerClassName="mb-4"
@@ -347,7 +347,7 @@ const ServicesPage = (props) => {
         />
       )}
       {/* <Footer className={`${absoluteFooter ? "absolute" : ""} left-0 bottom-0`} /> */}
-      <Footer className={`fixed left-0 bottom-0`} />
+      <Footer className={`md:fixed left-0 bottom-0`} />
     </Layout>
   );
 };
