@@ -1,16 +1,35 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Footer from '../components/footer'
-import HeaderMobile from '../components/header-mobile'
-import Layout from '../components/layout'
-import { mediumScreen } from '../utils/utils'
-import Header from '../components/header'
-import { useWindowSize } from '../utils/hook'
+import React, { useCallback, useMemo } from "react";
+import { Link, navigate } from "gatsby";
+import Img from "gatsby-image";
+import qs from "query-string";
+import { useLocation } from '@reach/router';
+import Footer from "../components/footer";
+import HeaderMobile from "../components/header-mobile";
+import Layout from "../components/layout";
+import { mediumScreen } from "../utils/utils";
+import Header from "../components/header";
+import { useWindowSize } from "../utils/hook";
 
 const Sales = ({ pageContext }) => {
-  const { screen } = useWindowSize()
-  const { products } = pageContext
+  const location = useLocation()
+  const { screen } = useWindowSize();
+  const { products: _products } = pageContext;
+
+  const onSetType = useCallback((type) => {
+    navigate(`/for-sale?type=${type}`);
+  }, []);
+  const queries = qs.parse(location.search);
+
+  const products = useMemo(() => {
+    if (!queries.type) {
+      return _products
+    }
+    if (typeof queries.type !== 'string') {
+      return _products
+    }
+    
+    return _products.filter(p => p.type === queries.type)
+  }, [_products, queries.type]) 
 
   return (
     <Layout
@@ -24,7 +43,7 @@ const Sales = ({ pageContext }) => {
       </div>
       <h1
         className="bg-black text-white uppercase text-4xl text-center font-semibold mt-8"
-        style={{ letterSpacing: '0.15em' }}
+        style={{ letterSpacing: "0.15em" }}
       >
         For sale
       </h1>
@@ -34,13 +53,22 @@ const Sales = ({ pageContext }) => {
         </p>
         <div className="container bg-primary py-2 mb-4">
           <div className="max-w-4xl mx-auto flex justify-around px-4 lg:px-0">
-            <button className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold">
+            <button
+              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              onClick={() => onSetType("electric")}
+            >
               Electric
             </button>
-            <button className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold">
+            <button
+              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              onClick={() => onSetType("gas")}
+            >
               Gas
             </button>
-            <button className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold">
+            <button
+              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              onClick={() => onSetType("custom")}
+            >
               Custom
             </button>
           </div>
@@ -54,7 +82,7 @@ const Sales = ({ pageContext }) => {
                   <Img
                     fluid={product.image.fluid}
                     alt="product-image"
-                    style={{ width: screen === 'sm' ? '16rem' : '18rem' }}
+                    style={{ width: screen === "sm" ? "16rem" : "18rem" }}
                   />
                 </Link>
               </div>
@@ -62,9 +90,9 @@ const Sales = ({ pageContext }) => {
                 {product.name}
               </p>
               <p className="text-lg text-center">
-                {Number(product.price).toLocaleString('en-US', {
-                  currency: 'USD',
-                  style: 'currency',
+                {Number(product.price).toLocaleString("en-US", {
+                  currency: "USD",
+                  style: "currency",
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 2,
                 })}
@@ -80,9 +108,9 @@ const Sales = ({ pageContext }) => {
           ))}
         </div>
       </div>
-      <Footer className='bottom-0' />
+      <Footer className="bottom-0" />
     </Layout>
-  )
-}
+  );
+};
 
-export default Sales
+export default Sales;

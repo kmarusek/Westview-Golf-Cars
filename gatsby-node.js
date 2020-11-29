@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             title
             name
             price
+            type
             description {
               id
               description

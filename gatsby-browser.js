@@ -9,3 +9,17 @@
 import './static/style/styles.css'
 import './static/style/menu.css'
 import 'react-image-lightbox/style.css'
+
+export const shouldUpdateScroll = ({
+  routerProps: { location, },
+  getSavedScrollPosition,
+}) => {
+  const currentPosition = getSavedScrollPosition(location)
+
+  // Don't update scroll position on certain pages
+  if (location.pathname.startsWith('/for-sale')) {
+    return false
+  }
+
+  window.scrollTo(...(currentPosition || [0, 0,]))
+}
