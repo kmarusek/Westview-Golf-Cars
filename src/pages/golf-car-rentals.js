@@ -47,17 +47,8 @@ const GolfCarsRental = () => {
       </h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4 lg:pb-8">
         <p className="mb-4">
-          We love pairing custom carts with ecstatic owners, and we love helping
-          people get their old cart back up and running again. But we also keep
-          a selection of our favorites around to rent them out for events, golf,
-          weddings, photos, and a list of things you wouldn’t believe. If you’ve
-          got a strange request, get in touch, we’ve heard it before.
-        </p>
-        <h2 className="text-center text-2xl mt-2 font-semibold">Events</h2>
-        <p className="mb-4">
-          Need to get cars for an event? Maybe you’re going golfing with your
-          company, or you just want to get around your wedding with a bit more
-          flare than the average bride and groom. Let’s talk.
+          We offer golf car rentals for weddings, race weekends, camping, family reunions and other special events. 
+          Rental options range from daily to weekly, call for pricing and delivery availability.
         </p>
         <div className="container mt-20 md:flex md:justify-around">
           <div className='md:w-1/2 max-w-sm mx-auto'>
