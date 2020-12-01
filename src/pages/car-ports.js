@@ -16,6 +16,28 @@ const CarPortsPage = () => {
           }
         }
       }
+      carport1: file(relativePath: { eq: "Carport.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      carport2: file(relativePath: { eq: "Carport-Wood-Storage.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      carport3: file(relativePath: { eq: "Carports-For-Boat.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      
     }
   `)
 
@@ -58,14 +80,37 @@ const CarPortsPage = () => {
         <p className="mb-6">
           Starting at $1190. Contact us for more pricing information.
         </p>
-        <div className="max-w-xl mx-auto">
+        <div className="container mt-20 md:flex md:justify-around">
+          <div className='md:w-1/3 max-w-sm mx-auto px-4'>
+            <Img
+              fluid={data.carport1.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+          </div>
+          <div className='md:w-1/3 max-w-2xl mx-auto mt-4 md:mt-0 px-4'>
+            <Img
+              fluid={data.carport2.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+          </div>
+          <div className='md:w-1/3 max-w-2xl mx-auto mt-4 md:mt-0 px-4'>
+            <Img
+              fluid={data.carport3.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+          </div>
+        </div>
+        <div className="max-w-xl mt-4 mx-auto">
           <Img
             fluid={data.authorized_dealer.childImageSharp.fluid}
             alt="car-ports"
           />
         </div>
       </div>
-      <Footer className="md:fixed bottom-0" />
+      <Footer className="bottom-0" />
     </Layout>
   )
 }

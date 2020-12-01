@@ -9,9 +9,16 @@ import Layout from '../components/layout'
 const GolfCarsRental = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "logo.png" }) {
+      rentals1: file(relativePath: { eq: "Golf-Car-Rentals-min.jpg" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      rentals2: file(relativePath: { eq: "Golf-Car-Rentals.jpg" }) {
+        childImageSharp {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -52,15 +59,24 @@ const GolfCarsRental = () => {
           company, or you just want to get around your wedding with a bit more
           flare than the average bride and groom. Let’s talk.
         </p>
-        <div className="max-w-md xl:max-w-xl mx-auto mt-20">
-          <Img
-            fluid={data.logo.childImageSharp.fluid}
-            className="w-full"
-            alt="hero-image"
-          />
+        <div className="container mt-20 md:flex md:justify-around">
+          <div className='md:w-1/2 max-w-sm mx-auto'>
+            <Img
+              fluid={data.rentals1.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+          </div>
+          <div className='md:w-1/3 max-w-2xl mx-auto mt-4 md:mt-0'>
+            <Img
+              fluid={data.rentals2.childImageSharp.fluid}
+              className="w-full"
+              alt="hero-image"
+            />
+          </div>
         </div>
       </div>
-      <Footer className="xl:absolute bottom-0" />
+      <Footer className="bottom-0" />
     </Layout>
   )
 }
