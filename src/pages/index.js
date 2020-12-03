@@ -155,12 +155,12 @@ const LandingPage = () => {
               <div className="menu">
                 <div className="menu__logo"></div>
                 <div className="menu__links">
-                  <ul className="hidden md:block">
+                  <ul className="hidden lg:block">
                     {Navs.map(({ text, to }, idx) => (
                       <li key={`${text}-${idx}`}>
                         <Link
                           to={to}
-                          className="text-white hidden md:block font-semibold uppercase hover:text-dark-light-2 text-xl index"
+                          className="text-white hidden lg:block font-semibold uppercase hover:text-dark-light-2 text-xl index"
                         >
                           {text}
                         </Link>

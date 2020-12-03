@@ -24,22 +24,21 @@ const ContactPage = () => {
   const onSubmit = useCallback((ev) => {
     ev.preventDefault()
     const form = new FormData(ev.target)
-    console.log('🚀 ~ file: contact.js ~ line 27 ~ onSubmit ~ form', form)
-    // TODO: adjust formspree endpoint here
-    // fetch('https://formspree.io/xyynrgvk', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //   },
-    //   body: form,
-    // })
-    //   .then(res => res.json())
-    //   .then(res => {
-    //     // console.log('res: ',res)
-    //     notify.show('Submitted successfully!', 'success')
-    //   }).catch(err => {
-    //     console.log('err: ',err)
-    //   })
+    fetch('https://formspree.io/f/xknpvaza', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+      },
+      body: form,
+    })
+      .then(res => res.json())
+      .then(res => {
+        // console.log('res: ',res)
+        // notify.show('Submitted successfully!', 'success')
+        alert('Submitted successfully!')
+      }).catch(err => {
+        console.log('err: ',err)
+      })
   }, [])
 
   return (

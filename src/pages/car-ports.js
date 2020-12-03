@@ -60,7 +60,7 @@ const CarPortsPage = () => {
       <h1 className="text-center text-2xl mt-2 font-semibold">
         Store vehicles, machinery, wood, and more.
       </h1>
-      <div className="container my-6 max-w-4xl px-8 md:px-12 md:pb-40 xl:pb-24">
+      <div className="container my-6 max-w-4xl px-8 md:px-12 md:pb-12">
         <p className="mb-4">
           Westview Golf Cars is proud to be an authorized dealer of American
           Steel Carports.
