@@ -81,7 +81,7 @@ const CarPortsPage = () => {
           Starting at $1190. Contact us for more pricing information.
         </p>
         <div className="container mt-20 md:flex md:justify-around">
-          <div className='md:w-1/3 max-w-sm mx-auto px-4'>
+          <div className='md:w-1/3 max-w-2xl mx-auto px-4'>
             <Img
               fluid={data.carport1.childImageSharp.fluid}
               className="w-full"

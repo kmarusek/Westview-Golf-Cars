@@ -142,7 +142,7 @@ function Product({ pageContext }) {
             </p>
             {description.map((d, idx) => (
               <div key={`description-${idx}`}>
-                <p>{d}</p>
+                <div style={{whiteSpace: 'pre-wrap'}}>{d}</div>
                 <br />
               </div>
             ))}
