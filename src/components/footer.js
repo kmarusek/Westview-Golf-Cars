@@ -23,7 +23,7 @@ const Footer = ({className = ''}) => {
             </Link>
           </li>
           <li className="px-3 md:px-4 font-semibold">
-            <Link to="/for-sale" className="text-white uppercase">
+            <Link to="/golf-car-rentals" className="text-white uppercase">
               Rentals
             </Link>
           </li>

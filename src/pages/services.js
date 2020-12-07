@@ -69,7 +69,6 @@ const ServicesPage = (props) => {
   const [photoIndex, setPhotoIdx] = useState(-1);
 
   const [opening, setOpening] = useState([]);
-  console.log('🚀 ~ file: services.js ~ line 75 ~ ServicesPage ~ opening', opening)
 
   const onClickImg = useCallback(
     (idx) => {

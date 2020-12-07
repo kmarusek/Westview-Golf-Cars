@@ -193,7 +193,9 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <Button className="margin-top1">Electric Golf Cars</Button>
+              <Link to="/for-sale?type=electric">
+                <Button className="margin-top1">Electric Golf Cars</Button>
+              </Link>
             </CardImg>
           </div>
           <div className="relative">
@@ -203,7 +205,9 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <Button className="margin-top1">Gas Golf Cars</Button>
+              <Link to="/for-sale?type=gas">
+                <Button className="margin-top1">Gas Golf Cars</Button>
+              </Link>
             </CardImg>
           </div>
           <div className="relative">
@@ -213,7 +217,9 @@ const LandingPage = () => {
               alt="hero-image"
             />
             <CardImg className="px-4 md:px-6 lg:px-10">
-              <Button className="margin-top1">Custom Golf Cars</Button>
+              <Link to="/for-sale?type=custom">
+                <Button className="margin-top1">Custom Golf Cars</Button>
+              </Link>
             </CardImg>
           </div>
         </div>
