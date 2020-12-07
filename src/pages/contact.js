@@ -52,7 +52,7 @@ const ContactPage = () => {
         <Header />
       </div>
       <h1
-        className="uppercase text-4xl text-center font-semibold mt-8"
+        className="bg-black text-white uppercase text-4xl text-center font-semibold mt-8"
         style={{ letterSpacing: '0.15em' }}
       >
         Contact
@@ -72,11 +72,11 @@ const ContactPage = () => {
               <h3 className='text-2xl mb-2'>Summer hours</h3>
               <div className='flex'>
                 <p className='inline-block w-36'>Monday - Friday:</p>
-                <p className='inline-block w-36'>8:00am - 5:00pm</p>
+                <p className='inline-block w-36'>8:00am - 4:00pm</p>
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Saturday:</p>
-                <p className='inline-block w-36'>8:00am - 12:00pm</p>
+                <p className='inline-block w-36'>8:00am - 1:00pm</p>
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Sunday</p>
@@ -85,11 +85,11 @@ const ContactPage = () => {
               <h3 className='text-2xl mb-2 mt-6'>Winter hours</h3>
               <div className='flex'>
                 <p className='inline-block w-36'>Monday - Friday:</p>
-                <p className='inline-block w-36'>8:00am - 5:00pm</p>
+                <p className='inline-block w-36'>8:00am - 4:00pm</p>
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Saturday:</p>
-                <p className='inline-block w-36'>8:00am - 12:00pm</p>
+                <p className='inline-block w-36'>Close</p>
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Sunday</p>
@@ -113,7 +113,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <Footer className="lg:absolute bottom-0" />
+      <Footer className="lg:relative bottom-0" />
     </Layout>
   )
 }
