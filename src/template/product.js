@@ -155,7 +155,7 @@ function Product({ pageContext }) {
           </div>
         </div>
       </div>
-      <Footer className="md:absolute bottom-0" />
+      <Footer className="lg:relative bottom-0" />
     </Layout>
   )
 }
