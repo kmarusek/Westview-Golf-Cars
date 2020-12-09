@@ -87,11 +87,11 @@ function Product({ pageContext }) {
         </div>
         {/* content */}
         <div className="flex flex-col lg:flex-row p-4">
-          <div className="lg:w-2/5 px-4">
+          <div className="lg:w-2/5 lg:px-4">
             <img
               src={productImageShowing}
               alt="product-img"
-              className="mb-4 mx-auto lg:mx-0 max-w-sm"
+              className="mb-4 mx-auto lg:mx-0 w-full lg:max-w-sm"
             />
             {relatedImages.length > 0 && (
               <div className="flex mt-2 my-2 lg:my-0 justify-center lg:justify-start">
@@ -121,14 +121,14 @@ function Product({ pageContext }) {
             <BackButton>
               <div
                 role="button"
-                className="ml-4 lg:ml-0 mt-2 lg:mt-4 pl-4 text-xl py-1 rounded font-semibold w-48 mb-4 flex items-center bg-primary inline"
+                className="mt-2 lg:mt-4 pl-4 text-xl py-1 rounded font-semibold w-48 mb-4 flex items-center bg-primary inline"
               >
                 <LeftArrow className="inline-block" />
                 <span className="ml-2">Go back</span>
               </div>
             </BackButton>
           </div>
-          <div className="lg:w-3/5 p-8 pt-0">
+          <div className="lg:w-3/5 lg:p-4 pt-0 mb-16 lg:mb-0">
             <p className="bg-primary text-xl p-2 text-center font-semibold">
               {product.name}
             </p>
@@ -155,7 +155,7 @@ function Product({ pageContext }) {
           </div>
         </div>
       </div>
-      <Footer className="lg:relative bottom-0" />
+      <Footer className="md:fixed left-0 bottom-0" />
     </Layout>
   )
 }

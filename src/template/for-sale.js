@@ -2,6 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import qs from "query-string";
+import cn from 'classname';
 import { useLocation } from '@reach/router';
 import Footer from "../components/footer";
 import HeaderMobile from "../components/header-mobile";
@@ -15,10 +16,15 @@ const Sales = ({ pageContext }) => {
   const { screen } = useWindowSize();
   const { products: _products } = pageContext;
 
-  const onSetType = useCallback((type) => {
-    navigate(`/for-sale?type=${type}`);
-  }, []);
   const queries = qs.parse(location.search);
+  const onSetType = useCallback((type) => {
+    if (queries.type === type) {
+      navigate(`/for-sale`);
+      return
+    }
+    
+    navigate(`/for-sale?type=${type}`);
+  }, [queries.type]);
 
   const products = useMemo(() => {
     if (!queries.type) {
@@ -28,7 +34,13 @@ const Sales = ({ pageContext }) => {
       return _products
     }
     
-    return _products.filter(p => p.type === queries.type)
+    return _products.filter(p => {
+      if (Array.isArray(p.type) && p.type.includes(queries.type)) {
+        return true
+      }
+      
+      return false
+    })
   }, [_products, queries.type]) 
 
   return (
@@ -54,19 +66,28 @@ const Sales = ({ pageContext }) => {
         <div className="container bg-primary py-2 mb-4">
           <div className="max-w-4xl mx-auto flex justify-around px-4 lg:px-0">
             <button
-              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              className={cn(["p-2 px-4 tracking-widest uppercase font-semibold transition duration-300", {
+                "bg-black text-white": queries.type !== 'electric',
+                "bg-white text-black": queries.type === 'electric'
+              }])}
               onClick={() => onSetType("electric")}
             >
               Electric
             </button>
             <button
-              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              className={cn(["p-2 px-4 tracking-widest uppercase font-semibold transition duration-300", {
+                "bg-black text-white": queries.type !== 'gas',
+                "bg-white text-black": queries.type === 'gas'
+              }])}
               onClick={() => onSetType("gas")}
             >
               Gas
             </button>
             <button
-              className="bg-black text-white p-2 px-4 tracking-widest uppercase font-semibold"
+              className={cn(["p-2 px-4 tracking-widest uppercase font-semibold transition duration-300", {
+                "bg-black text-white": queries.type !== 'custom',
+                "bg-white text-black": queries.type === 'custom'
+              }])}
               onClick={() => onSetType("custom")}
             >
               Custom
@@ -75,17 +96,14 @@ const Sales = ({ pageContext }) => {
         </div>
         <div className="container p-4 flex flex-wrap justify-center md:justify-between">
           {products.map((product) => (
-            <div key={product.productId} className="mb-6 lg:mb-12">
-              <div className="max-w-xs">
-                <Link className="w-full" to={`/products/${product.productId}`}>
-                  {/* <img src={product.image.file.url} alt="product-img" /> */}
-                  <Img
-                    fluid={product.image.fluid}
-                    alt="product-image"
-                    style={{ width: screen === "sm" ? "16rem" : "18rem" }}
-                  />
-                </Link>
-              </div>
+            <div key={product.productId} className="mb-6 max-w-xs" style={{minHeight: 368}}>
+              <Link className="w-full mx-auto" to={`/products/${product.productId}`}>
+                <Img
+                  fluid={product.image.fluid}
+                  alt="product-image"
+                  style={{ width: screen === "sm" ? "16rem" : "18rem" }}
+                />
+              </Link>
               <p className="text-xl p-2 text-center font-semibold">
                 {product.name}
               </p>
