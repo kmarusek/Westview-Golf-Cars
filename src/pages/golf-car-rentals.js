@@ -42,9 +42,6 @@ const GolfCarsRental = () => {
       >
         Rentals
       </h2>
-      <h1 className="text-center text-2xl mt-2 font-semibold">
-        An incredible ride for an unforgettable round
-      </h1>
       <div className="container my-6 max-w-4xl px-8 md:px-12 pb-4 lg:pb-8">
         <p className="mb-4">
           We offer golf car rentals for weddings, race weekends, camping, family reunions and other special events. 
