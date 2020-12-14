@@ -52,7 +52,7 @@ const LandingPage = () => {
     query {
       background: file(relativePath: { eq: "WESTVIEW-GOLF-CARS-bg.png" }) {
         childImageSharp {
-          fluid(width: 1200; quality: 100) {
+          fluid(maxWidth: 1200; quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
