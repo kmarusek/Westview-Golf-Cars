@@ -50,7 +50,7 @@ const OperationBoxV2 = styled.div`
 const LandingPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "WESTVIEW-GOLF-CARS-bg.png" }) {
+      background: file(relativePath: { eq: "image3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200; quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
