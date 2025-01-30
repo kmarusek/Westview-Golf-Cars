@@ -344,11 +344,11 @@ const LandingPage = () => {
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">SAT</p>
-                    <p className="w-2/3">close</p>
+                    <p className="w-2/3">closed</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">Sun</p>
-                    <p className="w-2/3">close</p>
+                    <p className="w-2/3">closed</p>
                   </div>
                 </div>
               </OperationBox>
@@ -374,7 +374,7 @@ const LandingPage = () => {
               <iframe
                 width='100%'
                 height='100%'
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11821.095939266785!2d-85.9686415!3d42.2085885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe826a8d98a0f682a!2sWestview%20Golf%20Cars%20%26%20More%2C%20LLC.!5e0!3m2!1sen!2sus!4v1604933876022!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.9568855889797!2d-85.9145597!3d42.215366100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88176a68d7e54369%3A0xaf208a5f1ce6fbaf!2s37704%20W%20Red%20Arrow%20Hwy%2C%20Paw%20Paw%2C%20MI%2049079!5e0!3m2!1sen!2sus!4v1738257135539!5m2!1sen!2sus"
                 frameBorder="0"
                 allowFullScreen=""
                 aria-hidden="false"
