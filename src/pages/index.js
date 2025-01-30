@@ -409,11 +409,11 @@ const LandingPage = () => {
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">SAT</p>
-                    <p className="w-2/3">close</p>
+                    <p className="w-2/3">closed</p>
                   </div>
                   <div className="flex py-1 lg:py-2 font-semibold">
                     <p className="w-1/3">Sun</p>
-                    <p className="w-2/3">close</p>
+                    <p className="w-2/3">closed</p>
                   </div>
                 </div>
               </OperationBoxV2>
