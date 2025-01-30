@@ -80,7 +80,7 @@ const ContactPage = () => {
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Sunday</p>
-                <p className='inline-block w-36'>Close</p>
+                <p className='inline-block w-36'>Closed</p>
               </div>
               <h3 className='text-2xl mb-2 mt-6'>Winter hours</h3>
               <div className='flex'>
@@ -89,11 +89,11 @@ const ContactPage = () => {
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Saturday:</p>
-                <p className='inline-block w-36'>Close</p>
+                <p className='inline-block w-36'>Closed</p>
               </div>
               <div className='flex'>
                 <p className='inline-block w-36'>Sunday</p>
-                <p className='inline-block w-36'>Close</p>
+                <p className='inline-block w-36'>Closed</p>
               </div>
             </div>
          </div>
